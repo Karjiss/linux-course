@@ -1,6 +1,6 @@
 # h0 - Hei Weppi
 
-a) Tässä minun ensimmäinen tehtävä!
+a) This is my first assignment
 
 ## References
 
