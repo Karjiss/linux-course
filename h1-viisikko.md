@@ -11,6 +11,7 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
   - Raportin tulee olla täsmällinen, kirjoitus kannattaa olla menneessä aikamuodossa (Karvinen 2006).
   - Toistettavuus: Samassa ympäristössä toimivan raportin lukijan pitäisi päästä raportin mukaan samaan pisteeseen, kuin tekijän(Karvinen 2006).
 
-  ## a) Asenna Debian 12-Bookworm virtuaalikoneeseen.
-
+  ## b) Asenna Salt (salt-minion) Linuxille (uuteen virtuaalikoneeseesi)
+  
+  
   
