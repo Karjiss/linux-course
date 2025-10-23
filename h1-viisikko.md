@@ -46,6 +46,6 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
   Tätä varten käytin komentoa:
   ``` $ sudo salt-call --version ```
 
-  Sain vastauksen: ```salt-call 3007.8 (Chlorine)```, eli asennus meni läpi.
+  Sain vastauksen: ```salt-call 3007.8 (Chlorine)```, eli asennus sujui ongelmitta, sekä toimi.
   
 ## c) Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
