@@ -4,15 +4,15 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
 
   ## x) Lue ja tiivistä
 
-  - Saltin tärkeimmät tilafunktiot ovat: pkg, file, service, user ja cmd (Karvinen 2023).
+  - Saltin tärkeimmät tilafunktiot ovat: pkg, file, service, user ja cmd (Karvinen 2023). Nämä olivat uusia asioita minulle, mutta todella hyödyllisiä hallintatyökaluja.
     
   - Voit hallinnoida tuhansia tietokoneita käyttäen Salttia (Karvinen 2018). Mietinkin tietoturvasta kiinnostuneena, että käytetäänkö tätä paljon kyberhyökkäyksissä? Todennäköisesti.
     
   - Asentaessa onedir version Saltista, Salt asentaa myös oman paikallisen version Pythonista, sekä muut toimivuuden kannalta tarvittavat riippuvuudet (VMWare Inc).
     
-  - Orjatietokoneen täytyy tietää, missä isäntä on. Orjatietokoneilla tulee myös olla uniikit tunnukset (Karvinen 2018).
+  - Orjatietokoneen täytyy tietää, missä isäntä on. Orjatietokoneilla tulee myös olla uniikit tunnukset (Karvinen 2018). Mitä käy, jos orjatietokoneille tulee samat ID:t jotenkin?
     
-  - Raportin tulee olla täsmällinen, toistettava sekä helppolukuinen (Karvinen 2006).
+  - Raportin tulee olla täsmällinen, toistettava sekä helppolukuinen (Karvinen 2006). Mielestäni helppolukuisuus on raportin tärkein osa.
 
   ## b) Saltin asennus Linuxille (salt-minion)
   
