@@ -1,6 +1,7 @@
 # h1 - Viisikko
 
 Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin viivoin. Sitten asennan Linuxin ja sen sisälle Salt (salt-minion).
+Käyn myös läpi esimerkeillä Saltin tärkeimmistä tilafunktioista, sekä kerron hieman termistä "idempotentti".
 
   ## x) Lue ja tiivistä
 
