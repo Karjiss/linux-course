@@ -136,3 +136,7 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
     <img width="566" height="59" alt="image" src="https://github.com/user-attachments/assets/206aeca9-8755-40c9-a3bc-5396ddc804a3" />
 
     - Komento varmisti poiston, sillä kyseistä tiedostoa ei löydy /tmp hakemistosta.
+
+  ### service - Palveluiden hallinta
+
+  
