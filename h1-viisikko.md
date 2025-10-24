@@ -14,7 +14,7 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
     
   - Raportin tulee olla täsmällinen, toistettava sekä helppolukuinen (Karvinen 2006).
 
-  ## b) Asenna Salt Linuxille (salt-minion)
+  ## b) Saltin asennus Linuxille (salt-minion)
   
   Asensin Saltin Salt Projectin nettisivujen (VMWare Inc) ohjeita hyödyntäen.
 
@@ -49,3 +49,28 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
   Sain vastauksen: ```salt-call 3007.8 (Chlorine)```, eli asennus sujui ongelmitta, sekä toimi.
   
 ## c) Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
+  Tässä tehtävässä käytin ohjeina Tero Karvisen artikkelia Saltin komennoista. (Karvinen 2018)
+
+  ### pkg - Pakettien hallintamoduuli
+ 
+  
+  Kokeilin komentoa, jonka tarkoitus on tarkistaa ja asentaa (tarvittaessa) ohjelman, tässä tapauksessa "tree": 
+  
+  ```$ sudo salt-call --local -l info state.single pkg.installed tree ```
+
+  <img width="597" height="443" alt="image" src="https://github.com/user-attachments/assets/a8c4f504-b6fe-48da-bb83-a444b2de9661" />
+
+  - Komento asensi ohjelman onnistuneesti
+  - Komentoa uudelleenajaessa huomasin, että ohjelma tarkisti asennuksen ilman muutoksia
+
+  Seuraavaksi kokeilin samankaltaista komentoa, mutta asennuksen sijaan ohjelma poistetaan:
+  
+  ```$ sudo salt-call --local -l info state.single pkg.removed tree ```
+
+  <img width="450" height="434" alt="image" src="https://github.com/user-attachments/assets/384cb6d0-07da-454d-bb25-34eb875dc635" />
+
+  - Komento poisti ohjelman onnistuneesti
+  - Komennon ajaminen uusiksi teki tarkistuksen ilman muutoksia, sillä ohjelmaa ei ollut enään olemassa
+  - Mieleen jäi kysymys: Onko Windowsin "bloatwarea" mahdollista pitää poistettuna tätä hyödyntäen?
+
+### file - Tiedostojen hallinta
