@@ -82,3 +82,38 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
   - Mieleen jäi kysymys: Onko Windowsin "bloatwarea" mahdollista pitää poistettuna tätä hyödyntäen?
 
 ### file - Tiedostojen hallinta
+
+
+  - file.managed tilafunktio varmistaa, että tiedosto on olemassa
+  - Jos tiedostoa ei ole, se luo sen tyhjänä, ellei toisin ole määritelty
+
+    Kokeilin tätä komentoa tarkistamalla, onko /tmp/hellojani tiedostoa olemassa. Jos ei, niin se luodaan tyhjänä
+
+    ``` $ sudo salt-call --local -l info state.single file.managed /tmp/hellojani ```
+
+    <img width="604" height="516" alt="image" src="https://github.com/user-attachments/assets/02fcaec4-1aa2-4176-83e6-0041da948d65" />
+
+  - Komento tarkisti, onko tiedosto olemassa ja loi tyhjän tiedoston, kun oli varmistanut sen olemattomuuden
+  - Tiedoston luonnin jälkeen tilafunktio muutti tuloksen true-muotoon.
+  - Komennon uudelleenajo tulosti kommentin, että tiedosto /tmp/hellojani on olemassa, muutoksia ei tehty
+
+  Varmistin vielä itse tiedoston olemassaolon komennolla: ``` $ ls /tmp/hellojani ```
+
+  <img width="478" height="62" alt="image" src="https://github.com/user-attachments/assets/bdd4911f-c8ef-430e-b348-c52e0499bd52" />
+
+  - Tiedosto oli hakemistossa, joten komento toimi oikein
+  
+ 
+  Seuraava komento tarkistaa, onko tiedosto olemassa valitulla sisällöllä, jos ei ole, se luo/lisää sinne valitun sisällön ja tiedoston:
+
+  
+  ```$ sudo salt-call --local -l info state.single file.managed /tmp/hellojani contents="foo" ```
+ 
+  <img width="609" height="476" alt="image" src="https://github.com/user-attachments/assets/b9054e90-931c-466c-a2a8-f103d10cc9ac" />
+
+  - Tilafunktio meni läpi, sekä päivitti aiemmin luodun tiedoston sisällöllä: "foo"
+  - Uudelleenajoin komennon ja lokin mukaan tiedosto löytyi, eikä päivityksiä tarvinnut tehdä
+
+    Varmistin tämän komennolla: ``` $ cat /tmp/hellojani ```
+
+    <img width="485" height="59" alt="image" src="https://github.com/user-attachments/assets/4938be6c-f7de-4de5-9aae-e60f01636084" />
