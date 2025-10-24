@@ -56,8 +56,8 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
 
   Sain vastauksen: ```salt-call 3007.8 (Chlorine)```, eli asennus sujui ongelmitta, sekä toimi.
   
-## c) Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
-  Tässä tehtävässä käytin ohjeina Tero Karvisen artikkelia Saltin komennoista (Karvinen 2018).
+## c) Viisi tärkeintä
+  Tässä tehtävässä kokeilin Saltin tärkeimpiä tilafunktioita. Käytin ohjeina Tero Karvisen artikkelia Saltin komennoista (Karvinen 2018).
 
   ### pkg - Pakettien hallintamoduuli
  
@@ -84,10 +84,10 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
 ### file - Tiedostojen hallinta
 
 
-  - file.managed tilafunktio varmistaa, että tiedosto on olemassa.
-  - Jos tiedostoa ei ole, se luo sen tyhjänä, ellei toisin ole määritelty.
+  - filellä hallinoidaan tiedostoja ja hakemistoja järjestelmissä
 
-    Kokeilin tätä komentoa tarkistamalla, onko /tmp/hellojani tiedostoa olemassa. Jos ei, niin se luodaan tyhjänä.
+    Ensimmäinen komento on file.managed:
+
 
     ``` $ sudo salt-call --local -l info state.single file.managed /tmp/hellojani ```
 
@@ -139,4 +139,74 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
 
   ### service - Palveluiden hallinta
 
+  - service vastaa järjestelmän palveluiden hallinnasta.
+
+  Seuraavaksi testasin komentoa service.running:
+
+  ```$ sudo salt-call --local -l info state.single service.running apache2 enable=True```
+
+  <img width="522" height="330" alt="image" src="https://github.com/user-attachments/assets/d38e83e4-303a-48f1-a33a-374c4e4d20e4" />
+
+  Komento epäonnistui, joten jouduin asentamaan Apache2 seuraavalla komennolla: ```$ sudo apt install apache2```
+
+  Apache2 asennuksen jälkeen kokeilin service.running komentoa uudelleen:
   
+  <img width="488" height="326" alt="image" src="https://github.com/user-attachments/assets/f7022275-e53b-45cd-b865-319590815282" />
+  
+  - Komento tarkisti, onko apache2 käynnissä.
+  - Muutoksia ei tapahtunut, sillä apache oli valmiiksi päällä.
+
+  Seuraavaksi kokeilin komentoa service.dead:
+  
+  ```$ sudo salt-call --local -l info state.single service.dead apache2 enable=False```
+
+  <img width="557" height="387" alt="image" src="https://github.com/user-attachments/assets/f03e1009-144e-4714-96fa-266d5475107e" />
+
+  - Asennus onnistui ja teki muutoksen.
+  - service.dead sulki apache2, sekä otti sen pois käytöstä käynnistyksessä.
+
+
+### user - Käyttäjien hallinta
+
+  - useria käytetään järjestelmän käyttäjien hallinnoimisessa
+
+    Kokeilin komentoa user.present:
+
+    ```$ sudo salt-call --local -l info state.single user.present terote08```
+
+    <img width="368" height="689" alt="image" src="https://github.com/user-attachments/assets/4d847cbf-c402-4561-beed-16dde386ffd9" />
+    
+    - Komento onnistui
+    - user.present tarkasti, onko käyttäjä "terote08" olemassa.
+    - Käyttäjää ei ollut, joten user.present loi uuden.
+
+    Sitten kokeilin komentoa user.absent:
+
+    ```$ sudo salt-call --local -l info state.single user.absent terote08```
+    
+    <img width="360" height="417" alt="image" src="https://github.com/user-attachments/assets/5cc1829e-475c-4227-b0f9-52463f44780b" />
+
+    - Komento toimi samalla periaattella, kuin file.absent.
+    - user.absent tarkisti, onko käyttäjä olemassa ja poisti sen.
+   
+
+### cmd - Komentojen suorittaja
+
+  - cmd voi ajaa skriptejä tai komentoja etänä tai paikallisesti hallituilla järjestelmillä
+
+Kokeilin komentoa cmd.run:
+
+```$ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="/tmp/foo"```
+
+  <img width="389" height="453" alt="image" src="https://github.com/user-attachments/assets/48419c54-1898-4dfe-ad13-944d619d6c5c" />
+
+- Komento loi tiedoston /tmp/foo.
+- Komento ei tee muutoksia, ellei niitä tarvita, tehden siitä idempotentin.
+
+  Tarkistin vielä, tekeekö se muutoksia uudelleenajettaessa:
+    <img width="316" height="324" alt="image" src="https://github.com/user-attachments/assets/4744006b-00a0-4da0-ad6c-849ceca21e37" />
+
+  - Komento ei tehnyt muutoksia, joten se toimi.
+
+
+## d) Idempotentti
