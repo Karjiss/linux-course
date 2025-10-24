@@ -204,7 +204,8 @@ Kokeilin komentoa cmd.run:
 - Komento ei tee muutoksia, ellei niitä tarvita, tehden siitä idempotentin.
 
   Tarkistin vielä, tekeekö se muutoksia uudelleenajettaessa:
-    <img width="316" height="324" alt="image" src="https://github.com/user-attachments/assets/4744006b-00a0-4da0-ad6c-849ceca21e37" />
+  
+  <img width="316" height="324" alt="image" src="https://github.com/user-attachments/assets/4744006b-00a0-4da0-ad6c-849ceca21e37" />
 
   - Komento ei tehnyt muutoksia, joten se toimi.
 
