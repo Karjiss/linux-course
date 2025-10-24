@@ -57,7 +57,7 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
   Sain vastauksen: ```salt-call 3007.8 (Chlorine)```, eli asennus sujui ongelmitta, sekä toimi.
   
 ## c) Viisi tärkeintä. Näytä Linuxissa esimerkit viidestä tärkeimmästä Saltin tilafunktiosta: pkg, file, service, user, cmd. Analysoi ja selitä tulokset.
-  Tässä tehtävässä käytin ohjeina Tero Karvisen artikkelia Saltin komennoista. (Karvinen 2018)
+  Tässä tehtävässä käytin ohjeina Tero Karvisen artikkelia Saltin komennoista (Karvinen 2018).
 
   ### pkg - Pakettien hallintamoduuli
  
@@ -77,31 +77,31 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
 
   <img width="450" height="434" alt="image" src="https://github.com/user-attachments/assets/384cb6d0-07da-454d-bb25-34eb875dc635" />
 
-  - Komento tarkisti onko ohjelma olemassa, sekä poisti sen tarvittaessa
-  - Komennon ajaminen uusiksi teki tarkistuksen ilman muutoksia, sillä ohjelmaa ei ollut enään olemassa
+  - Komento tarkisti onko ohjelma olemassa, sekä poisti sen tarvittaessa.
+  - Komennon ajaminen uusiksi teki tarkistuksen ilman muutoksia, sillä ohjelmaa ei ollut enään olemassa.
   - Mieleen jäi kysymys: Onko Windowsin "bloatwarea" mahdollista pitää poistettuna tätä hyödyntäen?
 
 ### file - Tiedostojen hallinta
 
 
-  - file.managed tilafunktio varmistaa, että tiedosto on olemassa
-  - Jos tiedostoa ei ole, se luo sen tyhjänä, ellei toisin ole määritelty
+  - file.managed tilafunktio varmistaa, että tiedosto on olemassa.
+  - Jos tiedostoa ei ole, se luo sen tyhjänä, ellei toisin ole määritelty.
 
-    Kokeilin tätä komentoa tarkistamalla, onko /tmp/hellojani tiedostoa olemassa. Jos ei, niin se luodaan tyhjänä
+    Kokeilin tätä komentoa tarkistamalla, onko /tmp/hellojani tiedostoa olemassa. Jos ei, niin se luodaan tyhjänä.
 
     ``` $ sudo salt-call --local -l info state.single file.managed /tmp/hellojani ```
 
     <img width="604" height="516" alt="image" src="https://github.com/user-attachments/assets/02fcaec4-1aa2-4176-83e6-0041da948d65" />
 
-  - Komento tarkisti, onko tiedosto olemassa ja loi tyhjän tiedoston, kun oli varmistanut sen olemattomuuden
+  - Komento tarkisti, onko tiedosto olemassa ja loi tyhjän tiedoston, kun oli varmistanut sen olemattomuuden.
   - Tiedoston luonnin jälkeen tilafunktio muutti tuloksen true-muotoon.
-  - Komennon uudelleenajo tulosti kommentin, että tiedosto /tmp/hellojani on olemassa, muutoksia ei tehty
+  - Komennon uudelleenajo tulosti kommentin, että tiedosto /tmp/hellojani on olemassa, muutoksia ei tehty.
 
   Varmistin vielä itse tiedoston olemassaolon komennolla: ``` $ ls /tmp/hellojani ```
 
   <img width="478" height="62" alt="image" src="https://github.com/user-attachments/assets/bdd4911f-c8ef-430e-b348-c52e0499bd52" />
 
-  - Tiedosto oli hakemistossa, joten komento toimi oikein
+  - Tiedosto oli hakemistossa, joten komento toimi oikein.
   
  
   Seuraava komento tarkistaa, onko tiedosto olemassa valitulla sisällöllä, jos ei ole, se luo/lisää sinne valitun sisällön ja tiedoston:
@@ -111,8 +111,8 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
  
   <img width="609" height="476" alt="image" src="https://github.com/user-attachments/assets/b9054e90-931c-466c-a2a8-f103d10cc9ac" />
 
-  - Tilafunktio meni läpi, sekä päivitti aiemmin luodun tiedoston sisällöllä: "foo"
-  - Uudelleenajoin komennon ja lokin mukaan tiedosto löytyi, eikä päivityksiä tarvinnut tehdä
+  - Tilafunktio meni läpi, sekä päivitti aiemmin luodun tiedoston sisällöllä: "foo".
+  - Uudelleenajoin komennon ja lokin mukaan tiedosto löytyi, eikä päivityksiä tarvinnut tehdä.
 
     Varmistin tämän komennolla: ``` $ cat /tmp/hellojani ```
 
