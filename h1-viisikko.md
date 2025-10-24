@@ -69,7 +69,7 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
 
   <img width="450" height="434" alt="image" src="https://github.com/user-attachments/assets/384cb6d0-07da-454d-bb25-34eb875dc635" />
 
-  - Komento poisti ohjelman onnistuneesti
+  - Komento tarkisti onko ohjelma olemassa, sekä poisti sen tarvittaessa
   - Komennon ajaminen uusiksi teki tarkistuksen ilman muutoksia, sillä ohjelmaa ei ollut enään olemassa
   - Mieleen jäi kysymys: Onko Windowsin "bloatwarea" mahdollista pitää poistettuna tätä hyödyntäen?
 
