@@ -211,3 +211,24 @@ Kokeilin komentoa cmd.run:
 
 
 ## d) Idempotentti
+
+  Idempotentti tarkoittaa sitä, että komento/tila voidaan ajaa useaan otteeseen ilman, että se aiheuttaa turhia muutoksia.
+  Tämän huomasin monessa komennossa aikaisemmassa tehtävässä, kun komento ei tehnyt muutoksia uudelleenajossa.
+  
+  Jos sinun täytyy asentaa ohjelma isossa yrityksessä järjestelmille, joilla sitä ei ole, idempotentti komento
+  asentaa ohjelman vain järjestelmiin, joilta se puuttuu.
+
+  Esimerkkinä komento:
+  
+  ```$ sudo salt-call --local -l info state.single pkg.installed tree```
+
+  <img width="498" height="531" alt="image" src="https://github.com/user-attachments/assets/c77e75f7-11ca-4392-81e2-ce08d374c26a" />
+
+
+  - Tässä ***pkg.installed*** tarkistaa, onko tree asennettu ja tarvittaessa asentaa sen.
+  - Toisella ajokerralla se tarkisti asennuksen, mutta ei kuitenkaan tehnyt muutoksia.
+  - Komento on siis idempotentti.
+  - Jos komento ei olisi idempotentti, se asentaisi treen aina uudelleen ja uudelleen.
+
+
+
