@@ -233,4 +233,12 @@ Kokeilin komentoa cmd.run:
 
 # Lähteet
 
+Karvinen, T. 2025. Install Salt on Debian 13 Trixie. Luettavissa.  https://terokarvinen.com/install-salt-on-debian-13-trixie/
 
+Karvinen, T. 2023. Run Salt Command Locally. Luettavissa: https://terokarvinen.com/2021/salt-run-command-locally/
+
+Karvinen, T. 2018. Salt Quickstart. Luettavissa: https://terokarvinen.com/2018/03/28/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
+
+Karvinen, T. 2006. Raportin kirjoittaminen. Luettavissa: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/
+
+VMWare Inc. s.a. Install Salt: Linux (DEB) – Salt install guide. Luettavissa: https://docs.saltproject.io/salt/install-guide/en/latest/topics/install-by-operating-system/linux-deb.html
