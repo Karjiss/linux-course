@@ -127,7 +127,7 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
 
     <img width="610" height="491" alt="image" src="https://github.com/user-attachments/assets/682c79db-7ba2-47f3-a890-4d848d427d8f" />
 
-    - Komento onnistui, teki yhden muutoksen (Tässä tapauksessa poistaminen).
+    - Komento onnistui ja teki yhden muutoksen (Tässä tapauksessa poistaminen).
     - Lokin kommentiosiossa luki, mikä tiedosto poistettiin.
     - Uudelleenajossa ei tehty muutoksia, sillä tiedostoa ei ollut enään olemassa.
 
