@@ -117,3 +117,22 @@ Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin
     Varmistin tämän komennolla: ``` $ cat /tmp/hellojani ```
 
     <img width="485" height="59" alt="image" src="https://github.com/user-attachments/assets/4938be6c-f7de-4de5-9aae-e60f01636084" />
+
+    - Tiedosto löytyi, sekä oikea sisältö tulostettiin.
+
+
+    Viimeinen komento poistaa tiedoston, jos se on olemassa:
+
+    ```$ sudo salt-call --local -l info state.single file.absent /tmp/hellojani ```
+
+    <img width="610" height="491" alt="image" src="https://github.com/user-attachments/assets/682c79db-7ba2-47f3-a890-4d848d427d8f" />
+
+    - Komento onnistui, teki yhden muutoksen (Tässä tapauksessa poistaminen).
+    - Lokin kommentiosiossa luki, mikä tiedosto poistettiin.
+    - Uudelleenajossa ei tehty muutoksia, sillä tiedostoa ei ollut enään olemassa.
+
+    Varmistin vielä tämänkin komennolla: ```$ ls /tmp/hellojani ```
+
+    <img width="566" height="59" alt="image" src="https://github.com/user-attachments/assets/206aeca9-8755-40c9-a3bc-5396ddc804a3" />
+
+    - Komento varmisti poiston, sillä kyseistä tiedostoa ei löydy /tmp hakemistosta.
