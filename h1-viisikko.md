@@ -1,6 +1,6 @@
 # h1 - Viisikko
 
-- Kurssi: Palvelinten Hallinta (Karvinen 2025)
+- Kurssi: Palvelinten Hallinta (Karvinen 2025a)
 - Opettaja: Tero Karvinen
 - Raportin kirjoittaja: Jani Karjalainen
 
@@ -12,6 +12,10 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
   - **Saltin tärkeimmät tilafunktiot ovat: pkg, file, service, user ja cmd (Karvinen 2023).**
   
     Nämä olivat uusia asioita minulle, mutta todella hyödyllisiä hallintatyökaluja.
+
+  - **Lisäämällä projektin avaimen järjestelmääsi, annat projektille täydet käyttöoikeudet koneellasi (Karvinen 2025b).**
+
+    Tässä on hyvä syy olla lataamatta ihan kaikkea, mitä netistä löytää.
     
   - **Voit hallinnoida tuhansia tietokoneita käyttäen Salttia (Karvinen 2018).**
 
@@ -240,7 +244,9 @@ Kokeilin komentoa cmd.run:
 
 # Lähteet
 
-Karvinen, T. 2025. Palvelinten Hallinta. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/
+Karvinen, T. 2025a. Palvelinten Hallinta. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/
+
+Karvinen, T. 2025b. Install Salt on Debian 13 Trixie. Luettavissa: https://terokarvinen.com/install-salt-on-debian-13-trixie/
 
 Karvinen, T. 2023. Run Salt Command Locally. Luettavissa: https://terokarvinen.com/2021/salt-run-command-locally/
 
