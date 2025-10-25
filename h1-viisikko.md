@@ -2,6 +2,7 @@
 
 - Kurssi: Palvelinten Hallinta (Karvinen 2025)
 - Opettaja: Tero Karvinen
+- Raportin kirjoittaja: Jani Karjalainen
 
 Tässä kotitehtävässä kerron tiivistetysti muutamasta artikkelista ranskalaisin viivoin. Seuraavassa tehtävässä asennan Linuxin ja sen sisälle Saltin (salt-minion).
 Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron hieman termistä "idempotentti".
