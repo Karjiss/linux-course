@@ -1,5 +1,8 @@
 # h1 - Viisikko
 
+- Kurssi: Palvelinten Hallinta (Karvinen 2025)
+- Opettaja: Tero Karvinen
+
 Tässä kotitehtävässä kerron tiivistetysti muutamasta artikkelista ranskalaisin viivoin. Seuraavassa tehtävässä asennan Linuxin ja sen sisälle Saltin (salt-minion).
 Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron hieman termistä "idempotentti".
 
@@ -13,7 +16,7 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
 
     Mietinkin tietoturvasta kiinnostuneena, että käytetäänkö tätä paljon kyberhyökkäyksissä? Todennäköisesti.
     
-  - **Asentaessa onedir version Saltista, Salt asentaa myös oman paikallisen version Pythonista, sekä muut toimivuuden kannalta tarvittavat riippuvuudet (VMWare Inc).**
+  - **Asentaessa onedir version Saltista, Salt asentaa myös oman paikallisen version Pythonista, sekä muut toimivuuden kannalta tarvittavat riippuvuudet (VMWare Inc. s.a.).**
     
   - **Orjatietokoneen täytyy tietää, missä isäntä on. Orjatietokoneilla tulee myös olla uniikit tunnukset (Karvinen 2018).**
 
@@ -236,7 +239,7 @@ Kokeilin komentoa cmd.run:
 
 # Lähteet
 
-Karvinen, T. 2025. Install Salt on Debian 13 Trixie. Luettavissa.  https://terokarvinen.com/install-salt-on-debian-13-trixie/
+Karvinen, T. 2025. Palvelinten Hallinta. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/
 
 Karvinen, T. 2023. Run Salt Command Locally. Luettavissa: https://terokarvinen.com/2021/salt-run-command-locally/
 
