@@ -1,6 +1,6 @@
 # h1 - Viisikko
 
-Tässä kotitehtävässä kerron tiivistetysti parista artikkelista ranskalaisin viivoin. Sitten asennan Linuxin ja sen sisälle Salt (salt-minion).
+Tässä kotitehtävässä kerron tiivistetysti muutamasta artikkelista ranskalaisin viivoin. Seuraavassa tehtävässä asennan Linuxin ja sen sisälle Saltin (salt-minion).
 Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron hieman termistä "idempotentti".
 
   ## x) Lue ja tiivistä
@@ -51,7 +51,7 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
   
   <img width="483" height="214" alt="image" src="https://github.com/user-attachments/assets/8a9f0ae1-32de-4450-874c-47d09e569209" />
 
-  Ohjelman asennuksen jälkeen päätin vielä tarkistaa, asentuiko Salt oikein.
+  Ohjelman asennuksen jälkeen päätin vielä tarkistaa asentuiko Salt oikein.
   Tätä varten käytin komentoa:
   ``` $ sudo salt-call --version ```
 
@@ -63,14 +63,16 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
   ### pkg - Pakettien hallintamoduuli
  
   
-  Kokeilin komentoa, jonka tarkoitus on tarkistaa ja asentaa (tarvittaessa) ohjelman, tässä tapauksessa "tree": 
+  Kokeilin komentoa, jonka tarkoitus on tarkistaa ja asentaa tarvittaessa ohjelman. 
+  
+  Tässä tapauksessa "tree": 
   
   ```$ sudo salt-call --local -l info state.single pkg.installed tree ```
 
   <img width="597" height="443" alt="image" src="https://github.com/user-attachments/assets/a8c4f504-b6fe-48da-bb83-a444b2de9661" />
 
-  - Komento asensi ohjelman onnistuneesti
-  - Komentoa uudelleenajaessa huomasin, että ohjelma tarkisti asennuksen ilman muutoksia
+  - Komento asensi ohjelman onnistuneesti.
+  - Komentoa uudelleenajaessa huomasin, että ohjelma tarkisti asennuksen ilman muutoksia.
 
   Seuraavaksi kokeilin samankaltaista komentoa, mutta asennuksen sijaan ohjelma poistetaan:
   
@@ -79,13 +81,13 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
   <img width="450" height="434" alt="image" src="https://github.com/user-attachments/assets/384cb6d0-07da-454d-bb25-34eb875dc635" />
 
   - Komento tarkisti onko ohjelma olemassa, sekä poisti sen tarvittaessa.
-  - Komennon ajaminen uusiksi teki tarkistuksen ilman muutoksia, sillä ohjelmaa ei ollut enään olemassa.
+  - Komennon ajaminen uusiksi teki tarkistuksen ilman muutoksia, sillä ohjelmaa ei ollut enää olemassa.
   - Mieleen jäi kysymys: Onko Windowsin "bloatwarea" mahdollista pitää poistettuna tätä hyödyntäen?
 
 ### file - Tiedostojen hallinta
 
 
-  - filellä hallinoidaan tiedostoja ja hakemistoja järjestelmissä
+  - Tilafunktiolla hallinnoidaan tiedostoja ja hakemistoja järjestelmissä
 
     Ensimmäinen komento on file.managed:
 
@@ -128,7 +130,7 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
 
     <img width="610" height="491" alt="image" src="https://github.com/user-attachments/assets/682c79db-7ba2-47f3-a890-4d848d427d8f" />
 
-    - Komento onnistui ja teki yhden muutoksen (Tässä tapauksessa poistaminen).
+    - Komento onnistui ja teki yhden muutoksen (tässä tapauksessa poistaminen).
     - Lokin kommentiosiossa luki, mikä tiedosto poistettiin.
     - Uudelleenajossa ei tehty muutoksia, sillä tiedostoa ei ollut enään olemassa.
 
@@ -140,7 +142,7 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
 
   ### service - Palveluiden hallinta
 
-  - service vastaa järjestelmän palveluiden hallinnasta.
+  - Tämä tilafunktio vastaa järjestelmän palveluiden hallinnasta.
 
   Seuraavaksi testasin komentoa service.running:
 
@@ -169,7 +171,7 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
 
 ### user - Käyttäjien hallinta
 
-  - useria käytetään järjestelmän käyttäjien hallinnoimisessa
+  - Järjestelmän käyttäjien hallinnoimisessa käytetään useria.
 
     Kokeilin komentoa user.present:
 
@@ -177,7 +179,7 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
 
     <img width="368" height="689" alt="image" src="https://github.com/user-attachments/assets/4d847cbf-c402-4561-beed-16dde386ffd9" />
     
-    - Komento onnistui
+    - Komento onnistui.
     - user.present tarkasti, onko käyttäjä "terote08" olemassa.
     - Käyttäjää ei ollut, joten user.present loi uuden.
 
@@ -193,7 +195,7 @@ Käyn myös läpi esimerkeillä Saltin tärkeimpiä tilafunktioita, sekä kerron
 
 ### cmd - Komentojen suorittaja
 
-  - cmd voi ajaa skriptejä tai komentoja etänä tai paikallisesti hallituilla järjestelmillä
+  - Tilanfunktio "cmd" voi ajaa skriptejä tai komentoja etänä tai paikallisesti hallituilla järjestelmillä.
 
 Kokeilin komentoa cmd.run:
 
