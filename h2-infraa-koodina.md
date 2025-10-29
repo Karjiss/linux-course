@@ -1,7 +1,9 @@
 # h2 - Infraa koodina
 
 Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurssille.
-Raportin kirjoittaja: Jani Karjalainen
+
+-  Raportin kirjoittaja: Jani Karjalainen
+
 ## Käyttöympäristö
 
 - Käyttöjärjestelmä: Microsoft Windows 10 Home
