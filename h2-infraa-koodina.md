@@ -11,5 +11,8 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 - Prosessori: Intel i5-6600K
 - Näytönohjain: NVIDIA GeForce RTX 2060
 - RAM: 16 GB DDR4
-- Virtualisointiohjisto: VMWare Workstation Pro
+- Virtualisointiohjelmisto: VMWare Workstation Pro
+
+## Lue ja tiivistä
+
 
