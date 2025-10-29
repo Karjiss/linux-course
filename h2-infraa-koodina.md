@@ -13,6 +13,20 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 - RAM: 16 GB DDR4
 - Virtualisointiohjelmisto: VMWare Workstation Pro
 
-## Lue ja tiivistä
+## x) Lue ja tiivistä
 
 
+
+
+## a) Hei infrakoodi!
+
+
+
+## b) Topping 
+
+
+
+## c) Viisikko tiedostossa
+
+
+## d) Kahden tilafunktion sls-tiedosto
