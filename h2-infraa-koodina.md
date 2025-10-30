@@ -15,9 +15,20 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 
 ## x) Lue ja tiivistä
 
-- Voit kirjoittaa idempotenttiä koodia Saltin omalla kielellä ```sudoedit``` komennolla sls-tiedostoon (Karvinen 2014).
+### **Hello Salt Infra-as-Code (Karvinen 2014)** 
 
+- Voit kirjoittaa idempotenttiä koodia Saltin omalla kielellä ```sudoedit``` komennolla sls-tiedostoon.
 
+### **Salt overview - Salt user guide (VMWare Inc s.a.)**
+
+- YAML on saltin oletus merkintäkieli, jota käytetään tiedostojen käsittelyyn.
+- YAML:in kolme peruselementtityyppiä ovat: skalaarit, listat ja sanakirjat.
+- YAML on järjestetty lohkorakenteisiin, joissa sisennys määrittää rakenteen tason.
+
+### The Top File (VMWare Inc 2025)
+  
+- Top on tiedosto, jonka tarkoitus on määrittää koneiden ryhmät ja niiden konfiguraatioroolit.
+- Nimi "top" tulee siitä, että top-tiedostot sijaitsevat hakemistorakenteen ylimmällä tasolla.
 
 ## a) Hei infrakoodi!
 
