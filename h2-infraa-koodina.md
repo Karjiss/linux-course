@@ -15,6 +15,7 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 
 ## x) Lue ja tiivistä
 
+- Voit kirjoittaa idempotenttiä koodia Saltin omalla kielellä ```sudoedit``` komennolla sls-tiedostoon (Karvinen 2014).
 
 
 
