@@ -32,6 +32,7 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 
 ## a) Hei infrakoodi!
 
+Tässä tehtävässä hyödynsin Karvisen(2025) kirjoittamaa artikkelia ohjeena.
 
 
 ## b) Topping 
