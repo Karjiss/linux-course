@@ -15,7 +15,7 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 
 ## x) Lue ja tiivistä
 
-### **Hello Salt Infra-as-Code (Karvinen 2014)** 
+### **Hello Salt Infra-as-Code (Karvinen 2024)** 
 
 - Voit kirjoittaa idempotenttiä koodia Saltin omalla kielellä ```sudoedit``` komennolla sls-tiedostoon.
 
@@ -32,7 +32,7 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 
 ## a) Hei infrakoodi!
 
-Tässä tehtävässä hyödynsin Karvisen(2025) kirjoittamaa artikkelia ohjeena.
+Tässä tehtävässä hyödynsin Karvisen(2024) kirjoittamaa artikkelia ohjeena.
 
 
 ## b) Topping 
