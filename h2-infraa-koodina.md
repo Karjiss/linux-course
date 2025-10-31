@@ -41,7 +41,34 @@ Kun päivitykset oli suoritettu, aloitin tehtävän teon.
 Salt oli jo asennettu, joten asensin "micro" -editorin koodia varten.
 
 Käytin komentoa: ```$ sudo apt-get -y install micro```
-ja otin editorin käyttöön komennolla: ```$ export EDITOR=micro```
+ja otin editorin käyttöön komennolla: ```$ export EDITOR=micro```.
+
+Seuraavaksi loin kansion "hello" moduulille komennolla:
+```$ sudo mkdir -p /srv/salt/hello/``` ja siirryin moduuliin komennolla: ```$ cd /srv/salt/hello/```.
+
+<img width="588" height="61" alt="image" src="https://github.com/user-attachments/assets/33de110f-b05e-487a-8028-ac5b32b08991" />
+
+- /srv/salt/ on kansio, joka jaetaan kaikille orjakoneille.
+
+Polussa "/srv/salt/hello/" ajoin komennon: ```$ sudoedit init.sls``` kirjoittaakseni infraa koodina.
+
+Komento avasi tekstieditorin, mihin kirjoitin kuvan mukaisen koodin.
+
+<img width="177" height="45" alt="image" src="https://github.com/user-attachments/assets/d60fbe1e-1cd8-443f-a4a6-6f20164e4ab0" />
+
+- Kirjoittaessa koodia tulee muistaa YAML:in säännöt.
+- Tämä koodi luo kansion "hellojani" /tmp hakemistoon.
+- Micro-editorissa **ctrl+q** sulkee editorin.
+
+Sitten ajoin juuri luomani koodin komennolla: ```$ sudo salt-call --local state.apply hello```.
+
+<img width="410" height="363" alt="image" src="https://github.com/user-attachments/assets/56c70bce-11c3-4cbd-85e5-63d7ed5c3385" />
+
+- Tilafunktio file.managed loi kansion "hellojani" onnistuneesti.
+
+Tarkistin, toimiko tilafunktio komennolla ```$ ls /tmp/hellojani```.
+
+<img width="601" height="40" alt="image" src="https://github.com/user-attachments/assets/03748792-ba59-422f-9d58-82980531e75a" />
 
 
 
