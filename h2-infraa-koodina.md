@@ -25,14 +25,17 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 - YAML:in kolme peruselementtityyppiä ovat: skalaarit, listat ja sanakirjat.
 - YAML on järjestetty lohkorakenteisiin, joissa sisennys määrittää rakenteen tason.
 
-### The Top File (VMWare Inc 2025)
+### **The Top File (VMWare Inc 2025)**
   
 - Top on tiedosto, jonka tarkoitus on määrittää koneiden ryhmät ja niiden konfiguraatioroolit.
 - Nimi "top" tulee siitä, että top-tiedostot sijaitsevat hakemistorakenteen ylimmällä tasolla.
 
 ## a) Hei infrakoodi!
 
-Tässä tehtävässä hyödynsin Karvisen(2024) kirjoittamaa artikkelia ohjeena.
+Tässä tehtävässä hyödynsin Karvisen (2024) kirjoittamaa artikkelia ohjeena.
+
+Salt oli jo asennettu, joten asensin "micro" -editorin koodia varten.
+
 
 
 ## b) Topping 
