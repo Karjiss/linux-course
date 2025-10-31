@@ -34,7 +34,14 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 
 Tässä tehtävässä hyödynsin Karvisen (2024) kirjoittamaa artikkelia ohjeena.
 
+Aloitin päivittämällä Debianin komennolla: ```$ sudo apt update```.
+Asensin päivityksen komennolla ```$ sudo apt upgrade```.
+
+Kun päivitykset oli suoritettu, aloitin tehtävän teon.
 Salt oli jo asennettu, joten asensin "micro" -editorin koodia varten.
+
+Käytin komentoa: ```$ sudo apt-get -y install micro```
+ja otin editorin käyttöön komennolla: ```$ export EDITOR=micro```
 
 
 
