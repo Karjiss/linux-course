@@ -74,7 +74,26 @@ Tarkistin, toimiko tilafunktio komennolla ```$ ls /tmp/hellojani```.
 
 ## b) Topping 
 
+Tässä tehtävässä loin top-filen, jonka tarkoituksena oli ajaa kaikki tämänhetkiset tilat kerralla.
 
+Aloitin tehtävän siirtymällä **/srv/salt/** hakemistoon komennolla: ```$ cd /srv/salt/```.
+Loin  **top.sls**-filen ja avasin tekstieditorin komennolla: ```$ sudoedit top.sls```.
+
+Kirjoitin tekstieditorilla koodin seuraavanlailla:
+```
+  base:
+    '*':
+      - favcli
+      - hello
+      - hellojani
+```
+
+Ajoin top-filen komennolla: ```$ sudo salt-call --local state.apply```
+
+<img width="497" height="522" alt="image" src="https://github.com/user-attachments/assets/352090ac-9153-4bc4-9ab8-a57ae3442719" />
+
+- Top-filen ajoi kaikki määritetyt tilat onnistuneesti.
+- Koodi on myös idempotentti, sillä se ei tehnyt muutoksia turhaan.
 
 ## c) Viisikko tiedostossa
 
