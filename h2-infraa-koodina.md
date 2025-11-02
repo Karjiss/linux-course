@@ -1,6 +1,6 @@
 # h2 - Infraa koodina
 
-Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurssille.
+Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta kurssille.
 
 -  Raportin kirjoittaja: Jani Karjalainen
 
@@ -21,8 +21,8 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 
 ### **Salt overview - Salt user guide (VMWare Inc s.a.)**
 
-- YAML on saltin oletus merkintäkieli, jota käytetään tiedostojen käsittelyyn.
-- YAML:in kolme peruselementtityyppiä ovat: skalaarit, listat ja sanakirjat.
+- YAML on Saltin oletus merkintäkieli, jota käytetään tiedostojen käsittelyyn.
+- YAMLin kolme peruselementtityyppiä ovat: skalaarit, listat ja sanakirjat.
 - YAML on järjestetty lohkorakenteisiin, joissa sisennys määrittää rakenteen tason.
 
 ### **The Top File (VMWare Inc 2025)**
@@ -32,10 +32,10 @@ Tämä on raportti kotitehtävään Tero Karvisen(2025) palvelin hallinta -kurss
 
 ## a) Hei infrakoodi!
 
-Tässä tehtävässä hyödynsin Karvisen (2024) kirjoittamaa artikkelia ohjeena.
+Tässä tehtävässä hyödynsin ohjeena Karvisen (2024) kirjoittamaa artikkelia.
 
 Aloitin päivittämällä Debianin komennolla: ```$ sudo apt update```.
-Asensin päivityksen komennolla ```$ sudo apt upgrade```.
+Asensin päivityksen komennolla: ```$ sudo apt upgrade```.
 
 Kun päivitykset oli suoritettu, aloitin tehtävän teon.
 Salt oli jo asennettu, joten asensin "micro" -editorin koodia varten.
@@ -77,9 +77,10 @@ Tarkistin, toimiko tilafunktio komennolla ```$ ls /tmp/hellojani```.
 Tässä tehtävässä loin top-filen, jonka tarkoituksena oli ajaa kaikki tämänhetkiset tilat kerralla.
 
 Aloitin tehtävän siirtymällä **/srv/salt/** hakemistoon komennolla: ```$ cd /srv/salt/```.
+
 Loin  **top.sls**-filen ja avasin tekstieditorin komennolla: ```$ sudoedit top.sls```.
 
-Kirjoitin tekstieditorilla koodin seuraavanlailla:
+Kirjoitin tekstieditorilla koodin seuraavanlaisesti:
 ```
   base:
     '*':
@@ -112,16 +113,16 @@ apache2:
   pkg.installed
 ```
 
-Kokeilin tilafunktion toimivuutta komennolla: ```$ sudo salt-call --local state.apply janipkg```
+Kokeilin tilafunktion toimivuutta komennolla: ```$ sudo salt-call --local state.apply janipkg```.
 
 <img width="526" height="308" alt="image" src="https://github.com/user-attachments/assets/3f850508-8a8c-45ca-9ddc-83c77cc4c2a9" />
 
 - Tilafunktio tarkisti, onko apache2 asennettu järjestelmälleni onnistuneesti.
 - Tilafunktio on myös idempotentti, sillä se ei tee muutoksia uudelleenajaessa, ellei apache2 puutu.
 
-### file - Luo tiedoston sisällöllä.
+### file - Luo tiedoston sisällöllä
 
-Seuraavaksi tein hakemiston "file" tilafunktiolle komennolla: ```$ sudo mkdir -p /srv/salt/janimorjesta```
+Seuraavaksi tein hakemiston "file" tilafunktiolle komennolla: ```$ sudo mkdir -p /srv/salt/janimorjesta```.
 Siirryin juuri luomaani hakemistoon, jossa loin sudoeditillä jälleen **init.sls**-tiedoston.
 Kirjoitin init.sls sisälle koodin: 
 
@@ -131,7 +132,7 @@ Kirjoitin init.sls sisälle koodin:
     - contents:  'Morjesta vaan sinne'
 ```
 
-Kokeilin tilaa komennolla: ```$ sudo salt-call --local state.apply janimorjesta```
+Kokeilin tilaa komennolla: ```$ sudo salt-call --local state.apply janimorjesta```.
 
 <img width="399" height="363" alt="image" src="https://github.com/user-attachments/assets/ce03515e-42ef-4028-84ec-8b8333260953" />
 
@@ -141,7 +142,7 @@ Kokeilin tilaa komennolla: ```$ sudo salt-call --local state.apply janimorjesta`
 
 - Uudelleenajaessa muutoksia ei tule, joten tila on idempotentti.
 
-Halusin vielä tarkistaa, syöttikö tilafunktio tiedostoon sisällön. Tarkistin sen komennolla: ```$ cat /tmp/janimorjesta```
+Halusin vielä tarkistaa, syöttikö tilafunktio tiedostoon sisällön. Tarkistin sen komennolla: ```$ cat /tmp/janimorjesta```.
 
 <img width="708" height="58" alt="image" src="https://github.com/user-attachments/assets/579f75b5-a249-41f6-996e-63d84b08870b" />
 
@@ -163,12 +164,12 @@ apache2:
     - enable: True
 ```
 
-Ajoin tilan komennolla: ```$ sudo salt-call --local state.apply janiservice```
+Ajoin tilan komennolla: ```$ sudo salt-call --local state.apply janiservice```.
 
 <img width="577" height="346" alt="image" src="https://github.com/user-attachments/assets/f2c75f79-8f95-4ef5-a21b-2bbe23ecb40e" />
 
-- Ajo suoriutui onnistuneesti
-- Tilafunktio otti Apache2 käyttöön ja käynnisti sen
+- Ajo suoriutui onnistuneesti.
+- Tilafunktio otti Apache2 käyttöön ja käynnisti sen.
 
 Uudelleenajo:
 
@@ -195,7 +196,7 @@ Kokeilin tilafunktiota komennolla: ```sudo salt-call --local state.apply janiuse
 <img width="234" height="451" alt="image" src="https://github.com/user-attachments/assets/8ca1a91a-e512-4045-b631-bf193eb19a09" />
 
 - Tilafunktio tarkistaa "newuser"-tunnuksen olemassa olon, sekä luo tarvittaessa uuden.
-- Tilafunktio toimi onnistuneesti
+- Tilafunktio toimi onnistuneesti.
 
 <img width="329" height="113" alt="image" src="https://github.com/user-attachments/assets/404de12d-3a98-4ffd-bb86-da151e8fda66" />
 
@@ -249,7 +250,7 @@ apache2-service:
       - pkg: apache2
 ```
 
-Ajoin Nämä kaksi tilafunktiota komennolla: ```$ sudo salt-call --local state.apply apacherunner```
+Ajoin Nämä kaksi tilafunktiota komennolla: ```$ sudo salt-call --local state.apply apacherunner```.
 
 <img width="418" height="459" alt="image" src="https://github.com/user-attachments/assets/4fc7bf9c-d698-446f-9353-d325b6087a8d" />
 
