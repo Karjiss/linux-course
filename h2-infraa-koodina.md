@@ -224,3 +224,53 @@ Ajoin tilan komennolla: ```$ sudo salt-call --local state.apply janicmd```.
 - Uudelleenajo ei tehnyt muutoksia, sillä tiedosto oli jo olemassa.
 
 ## d) Kahden tilafunktion sls-tiedosto
+
+Tässä tehtävässä tein sls-tiedoston, joka asentaa Apache2 ja käynnistää sen.
+
+Muokkasin aikaisempia tehtäviä sen verran, että poistin ja sammutin apache2 tätä varten.
+
+
+Ensin loin hakemiston komennolla: ```$ sudo mkdir -p /srv/salt/apacherunner```.
+
+Siirryin apacherunner hakemistoon komennolla: ```$ cd /srv/salt/apacherunner/```.
+
+Oikeassa hakemistossa loin sls-tiedoston tekstieditorissa komennolla: ```$ sudoedit init.sls```.
+
+Init.sls sisältö:
+```
+apache2:
+  pkg.installed
+
+apache2-service:
+  service.running:
+    - name: apache2
+    - enable: True
+    - require:
+      - pkg: apache2
+```
+
+Ajoin Nämä kaksi tilafunktiota komennolla: ```$ sudo salt-call --local state.apply apacherunner```
+
+<img width="418" height="459" alt="image" src="https://github.com/user-attachments/assets/4fc7bf9c-d698-446f-9353-d325b6087a8d" />
+
+- Molemmat tilafunktiot suoriutuivat onnistuneesti.
+- Kaksi muutosta, sekä selkeät infot lokeissa.
+
+Uudelleenajo:
+
+<img width="356" height="325" alt="image" src="https://github.com/user-attachments/assets/d5921a7b-9e05-49db-8eee-afc3f9ceb097" />
+
+- Uudelleenajoissa ei ollut ollenkaan muutoksia, joten koodi on idempotenttiä.
+
+
+## Lähdeluettelo
+
+Karvinen, T. 2025. Palvelinten Hallinta. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/
+
+Karvinen, T. 2024. Hello Salt Infra-as-Code. Luettavissa: https://terokarvinen.com/2024/hello-salt-infra-as-code/
+
+VMWare Inc. 2025. The Top File. Luettavissa: https://docs.saltproject.io/en/latest/ref/states/top.html
+
+VMWare Inc. s.a. Salt overview. Luettavissa: https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml
+
+
