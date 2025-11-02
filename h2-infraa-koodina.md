@@ -88,7 +88,7 @@ Kirjoitin tekstieditorilla koodin seuraavanlailla:
       - hellojani
 ```
 
-Ajoin top-filen komennolla: ```$ sudo salt-call --local state.apply```
+Ajoin top-filen komennolla: ```$ sudo salt-call --local state.apply```.
 
 <img width="497" height="522" alt="image" src="https://github.com/user-attachments/assets/352090ac-9153-4bc4-9ab8-a57ae3442719" />
 
@@ -97,5 +97,130 @@ Ajoin top-filen komennolla: ```$ sudo salt-call --local state.apply```
 
 ## c) Viisikko tiedostossa
 
+Tässä tehtävässä teen viidestä tärkeimmästä Saltin tilafunktiosta erilliset esimerkit omiksi tiloikseen.
+
+### pkg - Asentaa Apache2
+
+Aloitin luomalla hakemiston polkuun /srv/salt/ komennolla: ```$ sudo mkdir -p /srv/salt/janipkg```.
+
+Siirryin luomaani hakemistoon komennolla: ```$ cd /srv/salt/janipkg```, jossa loin **init.sls**-tiedoston ja avasin tekstieditorin komennolla: ```$ sudoedit init.sls```.
+
+Kirjoitin sudoeditillä tiedostoon **init.sls**: 
+
+```
+apache2:
+  pkg.installed
+```
+
+Kokeilin tilafunktion toimivuutta komennolla: ```$ sudo salt-call --local state.apply janipkg```
+
+<img width="526" height="308" alt="image" src="https://github.com/user-attachments/assets/3f850508-8a8c-45ca-9ddc-83c77cc4c2a9" />
+
+- Tilafunktio tarkisti, onko apache2 asennettu järjestelmälleni onnistuneesti.
+- Tilafunktio on myös idempotentti, sillä se ei tee muutoksia uudelleenajaessa, ellei apache2 puutu.
+
+### file - Luo tiedoston sisällöllä.
+
+Seuraavaksi tein hakemiston "file" tilafunktiolle komennolla: ```$ sudo mkdir -p /srv/salt/janimorjesta```
+Siirryin juuri luomaani hakemistoon, jossa loin sudoeditillä jälleen **init.sls**-tiedoston.
+Kirjoitin init.sls sisälle koodin: 
+
+```
+/tmp/janimorjesta:
+  file.managed:
+    - contents:  'Morjesta vaan sinne'
+```
+
+Kokeilin tilaa komennolla: ```$ sudo salt-call --local state.apply janimorjesta```
+
+<img width="399" height="363" alt="image" src="https://github.com/user-attachments/assets/ce03515e-42ef-4028-84ec-8b8333260953" />
+
+- Tilafunktio loi tiedoston "janimorjesta" polkuun /tmp.
+
+<img width="558" height="174" alt="image" src="https://github.com/user-attachments/assets/0b0039c5-eb83-40c3-bec5-c7dc206725e9" />
+
+- Uudelleenajaessa muutoksia ei tule, joten tila on idempotentti.
+
+Halusin vielä tarkistaa, syöttikö tilafunktio tiedostoon sisällön. Tarkistin sen komennolla: ```$ cat /tmp/janimorjesta```
+
+<img width="708" height="58" alt="image" src="https://github.com/user-attachments/assets/579f75b5-a249-41f6-996e-63d84b08870b" />
+
+- Tilafunktio toimi oikein.
+
+
+### service - Käynnistää Apache2
+
+Loin jälleen erillisen hakemiston, nyt "service" tilafunktiolle komennolla: ```$ sudo mkdir -p /srv/salt/janiservice```.
+
+Syötin komennot kuvan mukaisesti:
+
+<img width="653" height="78" alt="image" src="https://github.com/user-attachments/assets/a90a878e-6002-4be2-8b50-3ad9f20c7b96" />
+
+init.sls syötettävä koodi:
+```
+apache2:
+  service.running:
+    - enable: True
+```
+
+Ajoin tilan komennolla: ```$ sudo salt-call --local state.apply janiservice```
+
+<img width="577" height="346" alt="image" src="https://github.com/user-attachments/assets/f2c75f79-8f95-4ef5-a21b-2bbe23ecb40e" />
+
+- Ajo suoriutui onnistuneesti
+- Tilafunktio otti Apache2 käyttöön ja käynnisti sen
+
+Uudelleenajo:
+
+<img width="444" height="116" alt="image" src="https://github.com/user-attachments/assets/4b90566f-f5da-4215-90ea-babadbeb51b7" />
+
+- Uudelleenajaessa muutoksia ei tullut, sillä Apache2 oli jo käynnissä.
+
+### user - Luo uuden käyttäjän
+
+Loin "user" tilafunktiolle hakemiston komennolla: ```$ sudo mkdir -p /srv/salt/janiuser```. 
+
+Siirryin hakemistoon komennolla:
+```$ cd /srv/salt/janiuser/```, johon loin init-tiedoston komennolla:```$ sudoedit init.sls```.
+
+Syötin init.sls -tiedostoon koodin:
+```
+newuser:
+  user.present:
+    - home: /home/newuser
+    - shell: /bin/bash
+```
+Kokeilin tilafunktiota komennolla: ```sudo salt-call --local state.apply janiuser```.
+
+<img width="234" height="451" alt="image" src="https://github.com/user-attachments/assets/8ca1a91a-e512-4045-b631-bf193eb19a09" />
+
+- Tilafunktio tarkistaa "newuser"-tunnuksen olemassa olon, sekä luo tarvittaessa uuden.
+- Tilafunktio toimi onnistuneesti
+
+<img width="329" height="113" alt="image" src="https://github.com/user-attachments/assets/404de12d-3a98-4ffd-bb86-da151e8fda66" />
+
+- Uudelleenajaessa ei muutoksia.
+- Lokissa hyvin tietoa, mitä tehtiin.
+
+### cmd - Suorittaa komennon
+
+Viimeiseksi tein vielä "cmd" tilafunktiolle hakemiston komennolla: ```$ sudo mkdir -p /srv/salt/janicmd```.
+
+Siirryin hakemistoon komennolla: ```$ cd /srv/salt/janicmd/```, missä käytin komentoa:```$ sudoedit init.sls``` kirjoittaakseni koodin tilafunktiota varten.
+
+Init.sls sisältö:
+```
+create-temp-file:
+  cmd.run:
+    - name: 'touch /tmp/ajo-filu'
+    - creates: /tmp/ajo-filu
+```
+Ajoin tilan komennolla: ```$ sudo salt-call --local state.apply janicmd```.
+
+<img width="313" height="365" alt="image" src="https://github.com/user-attachments/assets/1a8513c4-c813-4d23-afd5-32a5409ecae1" />
+
+- Tilafunktio loi tiedoston "ajo-filu" /tmp hakemistoon.
+- Varmistin ```$ ls /tmp/ajo-filu``` komennolla tiedoston olemassaolon.
+- Uudelleenajo ei tehnyt muutoksia, sillä tiedosto oli jo olemassa.
 
 ## d) Kahden tilafunktion sls-tiedosto
