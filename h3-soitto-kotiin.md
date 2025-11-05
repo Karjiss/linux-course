@@ -13,7 +13,7 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 - RAM: 16 GB DDR4
 - Virtualisointiohjelmisto: VMWare Workstation Pro
 
-## Lue ja tiivistä
+## x) Lue ja tiivistä
 
 ### **Two Machine Virtual Network With Debian 11 Bullseye and Vagrant**
 
