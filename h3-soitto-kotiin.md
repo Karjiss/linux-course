@@ -15,6 +15,17 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 
 ## x) Lue ja tiivistä
 
-### **Two Machine Virtual Network With Debian 11 Bullseye and Vagrant**
+### **Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (Karvinen 2021)**
 
--
+- Vagrant automatisoi SSH-kirjautumisen.
+- Voit myös luoda automaattisesti virtuaalikoneita oman tarpeen mukaan.
+
+### **Salt Quickstart – Salt Stack Master and Slave on Ubuntu Linux (Karvinen 2018)**
+
+- Salt masterille on tehtävä reiät portteihin: 4505/tcp sekä 4506/tcp, jos masterilla on palomuuri käytössä.
+- Salt minionille tehtyjen muutosten jälkeen tulee käynnistää salt minion-palvelu uudestaan.
+
+### **Salt Vagrant - automatically provision one master and two slaves (Karvinen 2023)**
+
+- Voit tuhota virtuaalikoneen, sekä sen sisällön Vagrantilla komennolla: ```$ vagrant destroy```.
+- Saltilla voit kerätä yksityiskohtaista tietoa orjakoneista.
