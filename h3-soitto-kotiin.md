@@ -102,7 +102,7 @@ Siirryin takaisin /testilinux hakemistoon ja syötin komennon: ```$ vagrant up``
 
 - Nyt error johtui siitä, että VT-X on jo käytössä jossain muualla.
 
-Googletin lisää ja kyselin tekoälyltä hieman vinkkejä.
+Googletin lisää ja kyselin tekoälyltä (OpenAI) hieman vinkkejä.
 
 ChatGPT antoi ehdotukseksi seuraavat muutokset:
 
