@@ -1,4 +1,4 @@
-# h3 - Soitto Kotiin
+<img width="543" height="396" alt="image" src="https://github.com/user-attachments/assets/1cf629c5-2c97-4a7e-9fc9-78d487250a56" /># h3 - Soitto Kotiin
 
 Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta kurssille.
 
@@ -67,4 +67,79 @@ Viimeiseksi ajoin komennot: ```$ sudo apt update``` ja ```$ sudo apt-get install
 
 ## b) Linux Vagrant
 
+Tässä tehtävässä loin Vagrantilla uuden Linux-virtuaalikoneen.
+
+Aloitin luomalla hakemiston testikoneelle komennolla: ```$ mkdir testilinux/``` ja siirryin hakemistoon komennolla: ```$ cd testilinux/```.
+
+Sitten loin Vagrantfilen komennolla: ```$ vagrant init debian/bookworm64```
+
+<img width="691" height="94" alt="image" src="https://github.com/user-attachments/assets/818918bd-a996-4809-a58c-f461f92ef8f3" />
+
+- Vastaukseksi sain varmistuksen Vagrantfilen valmistumisesta.
+
+Seuraavaksi kokeilin käynnistää virtuaalikonetta komennolla: ```$ vagrant up```.
+
+<img width="726" height="172" alt="image" src="https://github.com/user-attachments/assets/efdbe784-5afa-476a-b7b7-e57650ad5c0c" />
+
+- VBoxManage ei lähde käyntiin.
+- Ongelma oli mahdollisesti virtualisointi asetuksissa.
+
+Selvitin komennolla: ```$ egrep -c '(vmx|svm)' /proc/cpuinfo```, onko virtualisointi käytössä ja sain vastaukseksi "0".
+
+- Virtualisointi ei siis ole käytössä
+
+Sitten sammutin virtuaalikoneen ja avasin sen asetukset.
+
+<img width="415" height="98" alt="image" src="https://github.com/user-attachments/assets/9799d4d6-a308-41f9-b389-3b7cd6fb7236" />
+
+- Virtualisointi asetukset eivät olleet päällä, joten laitoin ruksin kaikkiin tyhjiin kohtiin.
+
+Käynnistin koneen uudelleen hyväksyttyäni asetusten muutokset.
+
+Siirryin takaisin /testilinux hakemistoon ja syötin komennon: ```$ vagrant up```.
+
+<img width="725" height="248" alt="image" src="https://github.com/user-attachments/assets/6e7a6d62-4763-4134-90f6-2d0f7529f0d9" />
+
+- Nyt error johtui siitä, että VT-X on jo käytössä jossain muualla.
+
+Googletin lisää ja kyselin tekoälyltä hieman vinkkejä.
+
+ChatGPT antoi ehdotukseksi seuraavat muutokset:
+
+Promptit:
+
+<img width="368" height="230" alt="image" src="https://github.com/user-attachments/assets/f26b21b4-cfc8-4dc5-a396-61db20712754" />
+<img width="385" height="76" alt="image" src="https://github.com/user-attachments/assets/2daa7b08-9fd6-49f1-9c3a-164c5b407037" />
+
+Vastaus:
+
+<img width="543" height="396" alt="image" src="https://github.com/user-attachments/assets/759a8582-d535-4d97-8950-d39a3d72f56a" />
+
+Kokeilin tekoälyn ratkaisua.
+
+Sammutin virtuaalikoneen ja etsin .vmx tiedoston tietokoneeni polusta: This PC/Documents/Virtual Machines/Janin Debian.
+
+<img width="841" height="234" alt="image" src="https://github.com/user-attachments/assets/5293d0ec-c991-4178-9164-a96954f862db" />
+
+Avasin .vmx tiedoston notepadilla ja lisäsin sinne tarvittavat rivit:
+
+```
+vhv.enable = "TRUE"
+hypervisor.cpuid.v0 = "FALSE"
+```
+
+Sitten käynnistin virtuaalikoneeni taas uudelleen ja tarkistin vielä, onko KVM käynnissä komennolla: ```$ lsmod | grep kvm```.
+
+<img width="566" height="76" alt="image" src="https://github.com/user-attachments/assets/85ae75fd-40d0-4881-9a29-edccf6720d24" />
+
+- KVM on päällä
+
+Otin sen pois käytöstä komennoilla: ```$ sudo rmmod kvm_intel``` ja ```$ sudo rmmod kvm```.
+
+Kokeilin taas ajaa komennon: ```$ vagrant up```.
+
+<img width="877" height="443" alt="image" src="https://github.com/user-attachments/assets/d5e56e80-abbb-43ed-8cc3-9ca5bd85d3ae" />
+
+- Ei enään erroreita!
+- Ongelmat siis ratkottu
 
