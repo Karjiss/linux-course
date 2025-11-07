@@ -1,4 +1,4 @@
-<img width="543" height="396" alt="image" src="https://github.com/user-attachments/assets/1cf629c5-2c97-4a7e-9fc9-78d487250a56" /># h3 - Soitto Kotiin
+# h3 - Soitto Kotiin
 
 Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta kurssille.
 
