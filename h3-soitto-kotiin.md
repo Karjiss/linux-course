@@ -13,7 +13,7 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 - RAM: 16 GB DDR4
 - Virtualisointiohjelmisto: VMWare Workstation Pro
 
-## x) Lue ja tiivistä
+## x) - Lue ja tiivistä
 
 ### **Two Machine Virtual Network With Debian 11 Bullseye and Vagrant (Karvinen 2021)**
 
@@ -30,7 +30,7 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 - Voit tuhota virtuaalikoneen, sekä sen sisällön Vagrantilla komennolla: ```$ vagrant destroy```.
 - Saltilla voit kerätä yksityiskohtaista tietoa orjakoneista.
 
-## a) Hello Vagrant!
+## a) - Hello Vagrant!
 
 Tässä tehtävässä asensin Vagrantin, sekä VirtualBoxin. Käytin asennuksessa ohjeena HashiCorpin (s.a) nettisivuja.
 
@@ -65,7 +65,7 @@ Sitten Latasin VirtualBoxin ja lisäsin Oraclen julkisen avaimen komennolla:
 
 Viimeiseksi ajoin komennot: ```$ sudo apt update``` ja ```$ sudo apt-get install virtualbox-7.1``` asentaakseni VirtualBoxin.
 
-## b) Linux Vagrant
+## b) - Linux Vagrant
 
 Tässä tehtävässä loin Vagrantilla uuden Linux-virtuaalikoneen.
 
@@ -142,4 +142,9 @@ Kokeilin taas ajaa komennon: ```$ vagrant up```.
 
 - Ei enään erroreita!
 - Ongelmat siis ratkottu
+
+## c) - Kaksin kaunihimpi
+
+Tässä tehtävässä loin kahden Linux-tietokoneen verkon vagrantilla. Ohjeena käytin Karvisen (2021) artikkelia.
+
 
