@@ -143,10 +143,14 @@ Kokeilin taas ajaa komennon: ```$ vagrant up```.
 - Ei enään erroreita!
 - Ongelmat siis ratkottu
 
+Poistin vielä luomani virtuaalikoneen seuraavaa tehtävää varten komennolla: ```$ vagrant destroy```
+
+<img width="647" height="72" alt="image" src="https://github.com/user-attachments/assets/d34f11fa-72d2-4d3d-8fd4-2851c1776a2a" />
+
+
 ## c) - Kaksin kaunihimpi
 
 Tässä tehtävässä loin kahden Linux-tietokoneen verkon vagrantilla. Ohjeena käytin Karvisen (2021) artikkelia aiheesta.
 
-
-
+Aloitin luomalla uuden hakemiston tälle operaatiolle, sekä siirryin sinne komennolla: ```$ mkdir tuplakoneet/; cd tuplakoneet/```
 
