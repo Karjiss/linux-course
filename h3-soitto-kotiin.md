@@ -154,3 +154,57 @@ Tässä tehtävässä loin kahden Linux-tietokoneen verkon vagrantilla. Ohjeena 
 
 Aloitin luomalla uuden hakemiston tälle operaatiolle, sekä siirryin sinne komennolla: ```$ mkdir tuplakoneet/; cd tuplakoneet/```
 
+Sitten lisäsin hakemistoon Vagrantfilen, jota aloin muokkaamaan komennolla: ```$ nano Vagrantfile```.
+
+**Vagrantfile:**
+
+```
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+# Copyright 2019-2021 Tero Karvinen http://TeroKarvinen.com
+
+$tscript = <<TSCRIPT
+set -o verbose
+apt-get update
+apt-get -y install tree
+echo "Done - set up test environment - https://terokarvinen.com/search/?q=vagrant"
+TSCRIPT
+
+Vagrant.configure("2") do |config|
+	config.vm.synced_folder ".", "/vagrant", disabled: true
+	config.vm.synced_folder "shared/", "/home/vagrant/shared", create: true
+	config.vm.provision "shell", inline: $tscript
+	config.vm.box = "debian/bullseye64"
+
+	config.vm.define "t001" do |t001|
+		t001.vm.hostname = "t001"
+		t001.vm.network "private_network", ip: "192.168.56.3"
+	end
+
+	config.vm.define "t002", primary: true do |t002|
+		t002.vm.hostname = "t002"
+		t002.vm.network "private_network", ip: "192.168.56.4"
+	end
+	
+end
+```
+
+Vagrantfilen luonnin jälkeen kokeilin käynnistää komennolla: ```$ vagrant up```
+
+<img width="830" height="183" alt="image" src="https://github.com/user-attachments/assets/6f8f6fb5-53f2-476e-aea9-1f8afb1d6048" />
+
+- Asennus onnistui.
+- Aikaa meni noin 2-3 minuuttia.
+
+Kokeilin vielä verkkoyhteyttä molemmilla tietokoneilla toisiinsa, sekä Googlen nimipalveluun:
+
+<img width="550" height="213" alt="image" src="https://github.com/user-attachments/assets/d55ff712-000b-40b7-ad97-39848582e1b8" />
+
+- Tietokone "t001" verkko toimii
+
+<img width="549" height="207" alt="image" src="https://github.com/user-attachments/assets/d7f7c10a-4f8d-417f-8feb-5efec5dbf772" />
+
+- Tietokone "t002" verkko oli myös kunnossa
+
+## Herra-orja verkossa.
+
