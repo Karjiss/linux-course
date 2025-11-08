@@ -208,3 +208,26 @@ Kokeilin vielä verkkoyhteyttä molemmilla tietokoneilla toisiinsa, sekä Google
 
 ## Herra-orja verkossa.
 
+Tässä tehtävässä asennan aikaisemmin luoduille tietokoneille Salt-minionin, sekä Salt-masterin.
+
+Hyödynsin aikaisempaa raporttiani "h1-viisikko", jossa asensin Saltin puhtaalle Linuxille.
+
+**Aloitin asentamalla tietokoneille Saltin seuraavanlaisesti:**
+
+Asensin Curlin tietokoneille komennolla: ```$ sudo apt install curl```
+
+Loin hakemiston julkisille avaimille komennolla: ```$ sudo mkdir -p /etc/apt/keyrings```
+
+Lisäsin Salt Projectin julkisen avaimen ja ohjelmalähteen määritystiedoston komennoilla:
+```
+# 1. Julkinen avain:
+$ curl -fsSL https://packages.broadcom.com/artifactory/api/security/keypair/SaltProjectKey/public | sudo tee /etc/apt/keyrings/salt-archive-keyring.pgp  
+# 2. Ohjelmalähteen määritystiedosto:
+$ curl -fsSL https://github.com/saltstack/salt-install-guide/releases/latest/download/salt.sources | sudo tee /etc/apt/sources.list.d/salt.sources
+```
+Sitten latasin Salt-masterin "t001" tietokoneelle komennolla: ```$ sudo apt-get install salt-master```
+
+<img width="618" height="217" alt="image" src="https://github.com/user-attachments/assets/758b5482-febf-4dc1-a795-c1a5f54b5eff" />
+
+Tein vastaavanlaisesti "t002" tietokoneelle, mutta asensin Salt-minionin komennolla: ```$ sudo apt-get install salt-minion```
+
