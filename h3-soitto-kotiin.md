@@ -145,6 +145,8 @@ Kokeilin taas ajaa komennon: ```$ vagrant up```.
 
 ## c) - Kaksin kaunihimpi
 
-Tässä tehtävässä loin kahden Linux-tietokoneen verkon vagrantilla. Ohjeena käytin Karvisen (2021) artikkelia.
+Tässä tehtävässä loin kahden Linux-tietokoneen verkon vagrantilla. Ohjeena käytin Karvisen (2021) artikkelia aiheesta.
+
+
 
 
