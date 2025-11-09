@@ -48,7 +48,7 @@ wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/sh
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(grep -oP '(?<=UBUNTU_CODENAME=).*' /etc/os-release || lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install vagrant
 ```
-Varmistin vielä asennuksen komennolla: ```$ vagrant version```
+Varmistin vielä asennuksen komennolla: ```$ vagrant version```.
 
 <img width="456" height="110" alt="image" src="https://github.com/user-attachments/assets/0dc7f90a-5761-411c-8a0e-ac2e759ec384" />
 
@@ -76,7 +76,7 @@ Tässä tehtävässä loin Vagrantilla uuden Linux-virtuaalikoneen.
 
 Aloitin luomalla hakemiston testikoneelle komennolla: ```$ mkdir testilinux/``` ja siirryin hakemistoon komennolla: ```$ cd testilinux/```.
 
-Sitten loin Vagrantfilen komennolla: ```$ vagrant init debian/bookworm64```
+Sitten loin Vagrantfilen komennolla: ```$ vagrant init debian/bookworm64```.
 
 <img width="691" height="94" alt="image" src="https://github.com/user-attachments/assets/818918bd-a996-4809-a58c-f461f92ef8f3" />
 
@@ -122,7 +122,9 @@ Vastaus:
 
 Kokeilin tekoälyn ratkaisua.
 
-Sammutin virtuaalikoneen ja etsin .vmx tiedoston tietokoneeni polusta: This PC/Documents/Virtual Machines/Janin Debian.
+Sammutin virtuaalikoneen ja etsin .vmx tiedoston tietokoneeni polusta:
+
+```This PC/Documents/Virtual Machines/Janin Debian```
 
 <img width="841" height="234" alt="image" src="https://github.com/user-attachments/assets/5293d0ec-c991-4178-9164-a96954f862db" />
 
@@ -137,7 +139,7 @@ Sitten käynnistin virtuaalikoneeni taas uudelleen ja tarkistin vielä, onko KVM
 
 <img width="566" height="76" alt="image" src="https://github.com/user-attachments/assets/85ae75fd-40d0-4881-9a29-edccf6720d24" />
 
-- KVM on päällä
+- KVM on päällä.
 
 Otin sen pois käytöstä komennoilla: ```$ sudo rmmod kvm_intel``` ja ```$ sudo rmmod kvm```.
 
@@ -145,10 +147,10 @@ Kokeilin taas ajaa komennon: ```$ vagrant up```.
 
 <img width="877" height="443" alt="image" src="https://github.com/user-attachments/assets/d5e56e80-abbb-43ed-8cc3-9ca5bd85d3ae" />
 
-- Ei enään erroreita!
-- Ongelmat siis ratkottu.
+- Ei enää erroreita!
+- Ongelmat on siis ratkottu.
 
-Poistin vielä luomani virtuaalikoneen seuraavaa tehtävää varten komennolla: ```$ vagrant destroy```
+Poistin vielä luomani virtuaalikoneen seuraavaa tehtävää varten komennolla: ```$ vagrant destroy```.
 
 <img width="647" height="72" alt="image" src="https://github.com/user-attachments/assets/d34f11fa-72d2-4d3d-8fd4-2851c1776a2a" />
 
@@ -157,7 +159,7 @@ Poistin vielä luomani virtuaalikoneen seuraavaa tehtävää varten komennolla: 
 
 Tässä tehtävässä loin kahden Linux-tietokoneen verkon vagrantilla. Ohjeena käytin Karvisen (2021) artikkelia aiheesta.
 
-Aloitin luomalla uuden hakemiston tälle operaatiolle, sekä siirryin sinne komennolla: ```$ mkdir tuplakoneet/; cd tuplakoneet/```
+Aloitin luomalla uuden hakemiston tälle operaatiolle, sekä siirryin sinne komennolla: ```$ mkdir tuplakoneet/; cd tuplakoneet/```.
 
 Sitten lisäsin hakemistoon Vagrantfilen, jota aloin muokkaamaan komennolla: ```$ nano Vagrantfile```.
 
@@ -195,7 +197,7 @@ end
 ```
 - Vaihdoin opettajan valmiista pohjasta IP-osoitteet ja käyttöjärjestelmän uuteen versioon.
 
-Vagrantfilen luonnin jälkeen kokeilin käynnistää komennolla: ```$ vagrant up```
+Vagrantfilen luonnin jälkeen kokeilin käynnistää komennolla: ```$ vagrant up```.
 
 <img width="830" height="183" alt="image" src="https://github.com/user-attachments/assets/6f8f6fb5-53f2-476e-aea9-1f8afb1d6048" />
 
@@ -206,11 +208,11 @@ Kokeilin vielä verkkoyhteyttä molemmilla tietokoneilla toisiinsa, sekä Google
 
 <img width="550" height="213" alt="image" src="https://github.com/user-attachments/assets/d55ff712-000b-40b7-ad97-39848582e1b8" />
 
-- Tietokone "t001" verkko toimii
+- Tietokone "t001" verkko toimii.
 
 <img width="549" height="207" alt="image" src="https://github.com/user-attachments/assets/d7f7c10a-4f8d-417f-8feb-5efec5dbf772" />
 
-- Tietokone "t002" verkko oli myös kunnossa
+- Tietokone "t002" verkko oli myös kunnossa.
 
 ## d) - Herra-orja verkossa.
 
@@ -218,13 +220,13 @@ Tässä tehtävässä asennan aikaisemmin luoduille tietokoneille Salt-minionin,
 
 Hyödynsin aikaisempaa raporttiani "h1-viisikko", jossa asensin Saltin puhtaalle Linuxille.
 
-**Aloitin asentamalla tietokoneille Saltin seuraavanlaisesti:**
+**Aloitin asentamalla tietokoneille Saltin seuraavalla tavalla:**
 
 Siirryin virtuaalitietokoneille komennolla: ```$ vagrant ssh t001```ja ```$ vagrant ssh t002```.
 
-Asensin Curlin tietokoneille komennolla: ```$ sudo apt install curl```
+Asensin Curlin tietokoneille komennolla: ```$ sudo apt install curl```.
 
-Loin hakemiston julkisille avaimille komennolla: ```$ sudo mkdir -p /etc/apt/keyrings```
+Loin hakemiston julkisille avaimille komennolla: ```$ sudo mkdir -p /etc/apt/keyrings```.
 
 Lisäsin Salt Projectin julkisen avaimen ja ohjelmalähteen määritystiedoston komennoilla:
 ```
@@ -237,13 +239,13 @@ Sitten latasin Salt-masterin "t001" tietokoneelle komennolla: ```$ sudo apt-get 
 
 <img width="618" height="217" alt="image" src="https://github.com/user-attachments/assets/758b5482-febf-4dc1-a795-c1a5f54b5eff" />
 
-Tein aikaisemmat vaiheet myös "t002" tietokoneelle, paitsi asensin salt-minionin salt-masterin sijaan komennolla: ```$ sudo apt-get install salt-minion```
+Tein aiemmat vaiheet myös "t002" tietokoneelle, paitsi asensin salt-minionin salt-masterin sijaan komennolla: ```$ sudo apt-get install salt-minion```
 
 <img width="618" height="252" alt="image" src="https://github.com/user-attachments/assets/02c5ae5b-51a9-4be4-bb65-3d9a8df6cfe7" />
 
 Seuraavaksi lisäsin "t001" IP-osoitteen uudelle riville komennolla:
 
-```$ sudo nano /etc/salt/minion```
+```$ sudo nano /etc/salt/minion```.
 
 Ja uusi rivi tiedostoon:
 
@@ -273,7 +275,7 @@ Kokeilin herra-orja toimivuutta master-koneella komennolla:
 
 Saltin käyttöönotto onnistui, mutta olisin varmasti voinut asentaa Saltin koneille paljon helpommin käyttäen Vagrantfileä.
 
-Halusin kuitenkin ensikertaa Vagrantia kokeillessa asentaa kaiken manuaalisesti, mutta ensikerralla todennäköisesti automatisoin tämän vaiheen.
+Halusin kuitenkin ensimmäistä kertaa Vagrantia kokeillessa asentaa kaiken manuaalisesti, mutta ensikerralla todennäköisesti automatisoin tämän vaiheen.
 
 ## e) - Kokeile vähintään kahta tilaa verkon yli
 
@@ -310,18 +312,18 @@ Ajoin master-tietokoneella user.present tilan komennolla:
 
 <img width="365" height="508" alt="image" src="https://github.com/user-attachments/assets/121327a9-a8d2-4de5-bd1e-dc11946262b3" />
 
-- Tila onnistui
-- Loi uuden käyttäjän, sillä sitä ei ollut olemassa
+- Tila onnistui.
+- Loi uuden käyttäjän, sillä sitä ei ollut olemassa.
 
 <img width="359" height="253" alt="image" src="https://github.com/user-attachments/assets/4173d02a-1a28-42fa-9050-f840c37fc182" />
 
-- Uudelleenajo onnistui
-- Ei muutoksia, sillä käyttäjä on jo olemassa
+- Uudelleenajo onnistui.
+- Ei muutoksia, sillä käyttäjä on jo olemassa.
 - Tila siis tarkastaa käyttäjän olemassaolon ja tarvittaessa tekee uuden.
 
 Tarkastin vielä, onko käyttäjä luotu minion-koneelle.
 
-Käytin minion-koneella komentoa: ```$ cat /etc/passwd```
+Käytin minion-koneella komentoa: ```$ cat /etc/passwd```.
 
 <img width="457" height="368" alt="image" src="https://github.com/user-attachments/assets/bd5d75ad-9deb-4de8-9175-8b362cddc503" />
 
