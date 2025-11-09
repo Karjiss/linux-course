@@ -193,12 +193,12 @@ Vagrant.configure("2") do |config|
 	
 end
 ```
+- Vaihdoin opettajan valmiista pohjasta IP-osoitteet ja käyttöjärjestelmän uuteen versioon.
 
 Vagrantfilen luonnin jälkeen kokeilin käynnistää komennolla: ```$ vagrant up```
 
 <img width="830" height="183" alt="image" src="https://github.com/user-attachments/assets/6f8f6fb5-53f2-476e-aea9-1f8afb1d6048" />
 
-- Opettajan alkuperäiseen Vagrantfileen tehty muutoksia: IP-osoitteet ja käyttöjärjestelmä päivitettyyn versioon.
 - Asennus onnistui.
 - Aikaa meni noin 2-3 minuuttia.
 
