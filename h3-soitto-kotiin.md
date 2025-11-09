@@ -222,8 +222,6 @@ Hyödynsin aikaisempaa raporttiani "h1-viisikko", jossa asensin Saltin puhtaalle
 
 Siirryin virtuaalitietokoneille komennolla: ```$ vagrant ssh t001```ja ```$ vagrant ssh t002```.
 
-Päivitin tietokoneet ```$ sudo apt update```:lla-
-
 Asensin Curlin tietokoneille komennolla: ```$ sudo apt install curl```
 
 Loin hakemiston julkisille avaimille komennolla: ```$ sudo mkdir -p /etc/apt/keyrings```
