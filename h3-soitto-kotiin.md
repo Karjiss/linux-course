@@ -281,6 +281,9 @@ Ajoin komennon: ```$ sudo salt '*' state.single pkg.installed hashcat```.
 
 <img width="742" height="480" alt="image" src="https://github.com/user-attachments/assets/a8fb691b-04b3-4f78-afa1-b4c52012001f" />
 
+<img width="241" height="86" alt="image" src="https://github.com/user-attachments/assets/c243ff1e-ef83-4005-9dc5-470b4ddc43b8" />
+
+
 - Tila pkg.installed suoriutui onnistuneesti.
 - Se latasi minionille hashcatin, sekä muut tarvittavat ohjelmat.
 
