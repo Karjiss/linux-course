@@ -146,7 +146,7 @@ Kokeilin taas ajaa komennon: ```$ vagrant up```.
 <img width="877" height="443" alt="image" src="https://github.com/user-attachments/assets/d5e56e80-abbb-43ed-8cc3-9ca5bd85d3ae" />
 
 - Ei enään erroreita!
-- Ongelmat siis ratkottu
+- Ongelmat siis ratkottu.
 
 Poistin vielä luomani virtuaalikoneen seuraavaa tehtävää varten komennolla: ```$ vagrant destroy```
 
