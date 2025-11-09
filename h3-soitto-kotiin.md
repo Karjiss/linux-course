@@ -319,6 +319,13 @@ Ajoin master-tietokoneella user.present tilan komennolla:
 - Ei muutoksia, sillä käyttäjä on jo olemassa
 - Tila siis tarkastaa käyttäjän olemassaolon ja tarvittaessa tekee uuden.
 
+Tarkastin vielä, onko käyttäjä luotu minion-koneelle.
+
+Käytin minion-koneella komentoa: ```$ cat /etc/passwd```
+
+<img width="457" height="368" alt="image" src="https://github.com/user-attachments/assets/bd5d75ad-9deb-4de8-9175-8b362cddc503" />
+
+- Alimpana näkyy juuri luotu käyttäjä, joten toimii!
 
 # Lähdeluettelo
 
