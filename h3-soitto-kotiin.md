@@ -332,6 +332,8 @@ Käytin minion-koneella komentoa: ```$ cat /etc/passwd```.
 
 # Lähdeluettelo
 
+Hashicorp. s.a. Install Vagrant. Luettavissa: https://developer.hashicorp.com/vagrant/docs/installation
+
 Karvinen, T. 2025. Palvelinten Hallinta. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/
 
 Karvinen, T. 2023. Salt Vagrant - automatically provision one master and two slaves. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file
