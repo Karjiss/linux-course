@@ -181,7 +181,7 @@ Vagrant.configure("2") do |config|
 	config.vm.synced_folder ".", "/vagrant", disabled: true
 	config.vm.synced_folder "shared/", "/home/vagrant/shared", create: true
 	config.vm.provision "shell", inline: $tscript
-	config.vm.box = "debian/bookworm 64"
+	config.vm.box = "debian/bookworm64"
 
 	config.vm.define "t001" do |t001|
 		t001.vm.hostname = "t001"
@@ -195,7 +195,7 @@ Vagrant.configure("2") do |config|
 	
 end
 ```
-- Vaihdoin opettajan valmiista pohjasta IP-osoitteet ja käyttöjärjestelmän uuteen versioon.
+- Vaihdoin opettajan valmiista pohjasta IP-osoitteet, sekä käyttöjärjestelmän uuteen versioon.
 
 Vagrantfilen luonnin jälkeen kokeilin käynnistää komennolla: ```$ vagrant up```.
 
