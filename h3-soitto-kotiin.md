@@ -206,7 +206,7 @@ Kokeilin vielä verkkoyhteyttä molemmilla tietokoneilla toisiinsa, sekä Google
 
 - Tietokone "t002" verkko oli myös kunnossa
 
-## Herra-orja verkossa.
+## d) - Herra-orja verkossa.
 
 Tässä tehtävässä asennan aikaisemmin luoduille tietokoneille Salt-minionin, sekä Salt-masterin.
 
@@ -231,5 +231,60 @@ Sitten latasin Salt-masterin "t001" tietokoneelle komennolla: ```$ sudo apt-get 
 
 <img width="618" height="217" alt="image" src="https://github.com/user-attachments/assets/758b5482-febf-4dc1-a795-c1a5f54b5eff" />
 
-Tein vastaavanlaisesti "t002" tietokoneelle, mutta asensin Salt-minionin komennolla: ```$ sudo apt-get install salt-minion```
+Tein aikaisemmat vaiheet myös "t002" tietokoneelle, paitsi asensin salt-minionin salt-masterin sijaan komennolla: ```$ sudo apt-get install salt-minion```
 
+<img width="618" height="252" alt="image" src="https://github.com/user-attachments/assets/02c5ae5b-51a9-4be4-bb65-3d9a8df6cfe7" />
+
+Seuraavaksi lisäsin "t001" IP-osoitteen uudelle riville komennolla:
+
+```$ sudo nano /etc/salt/minion```
+
+Ja uusi rivi tiedostoon:
+
+<img width="732" height="524" alt="image" src="https://github.com/user-attachments/assets/4ec9e7a8-bdc6-4408-a427-f07fea1d1046" />
+
+- Poistin myös " #master: salt" rivin varmuuden vuoksi.
+
+Käynnistin salt-minionin uudestaan komennolla: ```$ sudo systemctl restart salt-minion```
+
+Salt-minionin uudelleenkäynnistyksen jälkeen siirryin master-koneelle (t001), jolla hyväksyin salt-minionin komennolla:
+
+```$ sudo salt-key -A```
+
+<img width="404" height="133" alt="image" src="https://github.com/user-attachments/assets/f0f4cd6e-352a-4e54-85e5-2d8d154e53b6" />
+
+### Testi
+
+Kokeilin herra-orja toimivuutta master-koneella komennolla:
+
+```$ sudo salt '*' test.ping```
+
+<img width="359" height="127" alt="image" src="https://github.com/user-attachments/assets/f9fb1d5f-715a-45de-af9d-ed9d4591ab4d" />
+
+- Minion-tietokoneen (t002) arvo on "True", joten herra-orja arkkitehtuuri toimii oikein.
+
+### Lopputulos
+
+Saltin käyttöönotto onnistui, mutta olisin varmasti voinut asentaa Saltin koneille paljon helpommin käyttäen Vagrantfileä.
+
+Halusin kuitenkin ensikertaa Vagrantia kokeillessa asentaa kaiken manuaalisesti, ehkä ensikerralla automatisoin tämän vaiheen.
+
+## e) - Kokeile vähintään kahta tilaa verkon yli
+
+Ajoin tässä tehtävässä kaksi eri tilaa luomani verkon yli.
+
+### pkg.installed
+
+Ensin otin käyttöön master-tietokoneen komennolla: ```$ vagrant ssh t001```.
+
+Ajoin komennon: ```$ sudo salt '*' state.single pkg.installed hashcat```.
+
+<img width="742" height="480" alt="image" src="https://github.com/user-attachments/assets/a8fb691b-04b3-4f78-afa1-b4c52012001f" />
+
+- Tila pkg.installed suoriutui onnistuneesti.
+- Se latasi minionille hashcatin, sekä muut tarvittavat ohjelmat.
+
+<img width="594" height="349" alt="image" src="https://github.com/user-attachments/assets/3da362fb-b427-4fb0-a8e5-9dddaf1e6711" />
+
+- Uudelleenajo onnistui.
+- Ei muutoksia, sillä hashcat on jo asennettu.
