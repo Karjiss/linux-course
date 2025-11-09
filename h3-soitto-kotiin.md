@@ -214,6 +214,8 @@ Hyödynsin aikaisempaa raporttiani "h1-viisikko", jossa asensin Saltin puhtaalle
 
 **Aloitin asentamalla tietokoneille Saltin seuraavanlaisesti:**
 
+Siirryin virtuaalitietokoneille komennolla: ```$ vagrant ssh t001```ja ```$ vagrant ssh t002```.
+
 Asensin Curlin tietokoneille komennolla: ```$ sudo apt install curl```
 
 Loin hakemiston julkisille avaimille komennolla: ```$ sudo mkdir -p /etc/apt/keyrings```
