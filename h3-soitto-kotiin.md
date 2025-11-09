@@ -28,7 +28,7 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 ### **Salt Vagrant - automatically provision one master and two slaves (Karvinen 2023)**
 
 - Top file määrittää, mille orjille ajetaan mitäkin tiloja.
-- Kirjoitat infraa koodina .sls tiedostoihin käyttäen komentoja:
+- Voit kirjoittaa infraa koodina .sls tiedostoihin käyttäen komentoja:
 
   ```
   $ sudo mkdir -p /srv/salt/testi
