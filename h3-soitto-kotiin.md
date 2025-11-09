@@ -27,8 +27,13 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 
 ### **Salt Vagrant - automatically provision one master and two slaves (Karvinen 2023)**
 
-- Voit tuhota virtuaalikoneen, sekä sen sisällön Vagrantilla komennolla: ```$ vagrant destroy```.
-- Saltilla voit kerätä yksityiskohtaista tietoa orjakoneista.
+- Top file määrittää, mille orjille ajetaan mitäkin tiloja.
+- Kirjoitat infraa koodina .sls tiedostoihin käyttäen komentoja:
+
+  ```
+  $ sudo mkdir -p /srv/salt/testi
+  $ sudoedit srv/salt/testi/init.sls
+  ```
 
 ## a) - Hello Vagrant!
 
@@ -267,13 +272,13 @@ Kokeilin herra-orja toimivuutta master-koneella komennolla:
 
 Saltin käyttöönotto onnistui, mutta olisin varmasti voinut asentaa Saltin koneille paljon helpommin käyttäen Vagrantfileä.
 
-Halusin kuitenkin ensikertaa Vagrantia kokeillessa asentaa kaiken manuaalisesti, ehkä ensikerralla automatisoin tämän vaiheen.
+Halusin kuitenkin ensikertaa Vagrantia kokeillessa asentaa kaiken manuaalisesti, mutta ensikerralla todennäköisesti automatisoin tämän vaiheen.
 
 ## e) - Kokeile vähintään kahta tilaa verkon yli
 
 Ajoin tässä tehtävässä kaksi eri tilaa luomani verkon yli.
 
-### pkg.installed
+### pkg
 
 Ensin otin käyttöön master-tietokoneen komennolla: ```$ vagrant ssh t001```.
 
@@ -290,4 +295,41 @@ Ajoin komennon: ```$ sudo salt '*' state.single pkg.installed hashcat```.
 <img width="594" height="349" alt="image" src="https://github.com/user-attachments/assets/3da362fb-b427-4fb0-a8e5-9dddaf1e6711" />
 
 - Uudelleenajo onnistui.
-- Ei muutoksia, sillä hashcat on jo asennettu.
+- Ei muutoksia, sillä hashcat on jo asennettu (idempotenssi).
+
+Tarkistin vielä minion-tietokoneelta hashcatin olemassaolon erikseen.
+
+<img width="724" height="187" alt="image" src="https://github.com/user-attachments/assets/966522e1-d6f9-434e-8636-fbd37b6e1d6a" />
+
+### user
+
+Ajoin master-tietokoneella user.present tilan komennolla:
+
+```$ sudo salt '*' state.single user.present jani```
+
+<img width="365" height="508" alt="image" src="https://github.com/user-attachments/assets/121327a9-a8d2-4de5-bd1e-dc11946262b3" />
+
+- Tila onnistui
+- Loi uuden käyttäjän, sillä sitä ei ollut olemassa
+
+<img width="359" height="253" alt="image" src="https://github.com/user-attachments/assets/4173d02a-1a28-42fa-9050-f840c37fc182" />
+
+- Uudelleenajo onnistui
+- Ei muutoksia, sillä käyttäjä on jo olemassa
+- Tila siis tarkastaa käyttäjän olemassaolon ja tarvittaessa tekee uuden.
+
+
+# Lähdeluettelo
+
+Karvinen, T. 2025. Palvelinten Hallinta. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/
+
+Karvinen, T. 2023. Salt Vagrant - automatically provision one master and two slaves. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file
+
+Karvinen, T. 2021. Two Machine Virtual Network with Debian 11 Bullseye and Vagrant. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/
+
+Karvinen, T. 2018. Salt Quickstart - Salt Stack Master and Slave on Ubuntu Linux. Luettavissa: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/
+
+OpenAI. 2025. ChatGPT. Promptit näkyvät raportissa. https://chatgpt.com
+
+Oracle. 2025. Download VirtualBox for Linux Hosts. Luettavissa: https://virtualbox.org/wiki/Linux_Downloads
+
