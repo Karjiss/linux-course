@@ -325,7 +325,8 @@ Käytin minion-koneella komentoa: ```$ cat /etc/passwd```
 
 <img width="457" height="368" alt="image" src="https://github.com/user-attachments/assets/bd5d75ad-9deb-4de8-9175-8b362cddc503" />
 
-- Alimpana näkyy juuri luotu käyttäjä, joten toimii!
+- Alimpana näkyy juuri luotu käyttäjä.
+
 
 # Lähdeluettelo
 
