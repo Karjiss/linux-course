@@ -179,7 +179,7 @@ Vagrant.configure("2") do |config|
 	config.vm.synced_folder ".", "/vagrant", disabled: true
 	config.vm.synced_folder "shared/", "/home/vagrant/shared", create: true
 	config.vm.provision "shell", inline: $tscript
-	config.vm.box = "debian/bullseye64"
+	config.vm.box = "debian/bookworm 64"
 
 	config.vm.define "t001" do |t001|
 		t001.vm.hostname = "t001"
@@ -198,6 +198,7 @@ Vagrantfilen luonnin jälkeen kokeilin käynnistää komennolla: ```$ vagrant up
 
 <img width="830" height="183" alt="image" src="https://github.com/user-attachments/assets/6f8f6fb5-53f2-476e-aea9-1f8afb1d6048" />
 
+- Opettajan alkuperäiseen Vagrantfileen tehty muutoksia: IP-osoitteet ja käyttöjärjestelmä päivitettyyn versioon.
 - Asennus onnistui.
 - Aikaa meni noin 2-3 minuuttia.
 
