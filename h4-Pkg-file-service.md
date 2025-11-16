@@ -11,7 +11,7 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 - Prosessori: Intel i5-6600K
 - Näytönohjain: NVIDIA GeForce RTX 2060
 - RAM: 16 GB DDR4
-- Virtualisointiohjelmisto: **VMWare Workstation Pro** ja **Vagrant**
+- Virtualisointiohjelmisto: **VMWare Workstation Pro**
 
 ## x) - Lue ja tiivistä
 
@@ -66,7 +66,7 @@ LogLevel INFO
 
 LoginGraceTime 2m
 
-PermitRootLogin no
+PermitRootLogin prohibit-password
 
 StrictModes yes
 
@@ -84,13 +84,15 @@ AuthorizedKeysCommand none
 
 AuthorizedKeysCommandUser nobody
 
+PermitRootLogin no
+
+PasswordAuthentication yes
+
 HostbasedAuthentication no
 
 IgnoreUserKnownHosts no
 
 IgnoreRhosts yes
-
-PasswordAuthentication yes
 
 PermitEmptyPasswords no
 
@@ -98,13 +100,23 @@ ChallengeResponseAuthentication no
 
 #KerberosAuthentication no
 
+
+
 #KerberosOrLocalPasswd yes
+
+
 
 #KerberosTicketCleanup yes
 
+
+
 #KerberosGetAFSToken no
 
+
+
 #GSSAPIAuthentication no
+
+
 
 #GSSAPICleanupCredentials yes
 
