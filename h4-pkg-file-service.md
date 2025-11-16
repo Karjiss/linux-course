@@ -269,3 +269,8 @@ Sitten kokeilin vielä SSH-yhteyttä orja-koneeseen masterilta komennolla: ```$ 
 
 <img width="664" height="172" alt="image" src="https://github.com/user-attachments/assets/7120eaec-b922-4699-9212-ccff29d1a1cc" />
 
+## Lähdeluettelo
+
+Karvinen, T. 2025. Palvelinten Hallinta. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/
+
+Karvinen, T. 2025. Pkg-File-Service - Control Daemons with Salt – Change SSH Server Port. Luettavissa: https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh
