@@ -195,12 +195,11 @@ Käytin komentoa: ```$ sudo systemctl restart ssh```, jonka jälkeen tarkistin p
 
 Sitten käynnistin orja-tietokoneeni, jolla kokeilin SSH-yhteyttä master-koneeseen.
 
-Käytin komentoa: ```$ ssh -p 1337 jani@192.168.1.253```.
+Käytin komentoa: ```$ ssh jani@192.168.1.253```.
 
-<img width="847" height="213" alt="image" src="https://github.com/user-attachments/assets/3846709c-c7ea-46ff-a9bc-a344deabcf0b" /> <img width="529" height="40" alt="image" src="https://github.com/user-attachments/assets/3c6740c1-6c93-45b5-afa9-231807587ab0" />
+<img width="829" height="326" alt="image" src="https://github.com/user-attachments/assets/c344bbbc-9a40-4697-bb2c-3ec8add884a2" />
 
-
-- Yhteys toimii, mutta julkisen avaimen puuttuminen hylkää yhteyden.
+- Pääsin sisälle, joten SSH-yhteys toimii!
 
 ### Automatisoitu versio
 
