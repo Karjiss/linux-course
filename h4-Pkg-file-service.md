@@ -31,8 +31,155 @@ Syötin master-koneella komennon: ```$ sudo apt-get install ssh```.
 
 <img width="708" height="281" alt="image" src="https://github.com/user-attachments/assets/512c53e7-1470-43f7-9778-0eb584249c3d" />
 
-Avasin SSH:n konfigurointitiedoston komennolla: ```$ sudoedit /etc/ssh/sshd_config```, jonne lisäsin rivin "Port 8888".
+Avasin SSH:n konfigurointitiedoston komennolla: ```$ sudoedit /etc/ssh/sshd_config```.
 
-<img width="726" height="436" alt="image" src="https://github.com/user-attachments/assets/9820757c-f8c8-4a8f-a0e8-c8bf8a6b7def" />
+Poistin kommenttimerkit niistä asetuksista, mitä tarvitsin.
+
+**sshd_config**:
+
+```
+# SSH Konffaus
+
+Port 1337
+
+Port 22
+
+AddressFamily any
+
+ListenAddress 0.0.0.0
+
+ListenAddress ::
+
+HostKey /etc/ssh/ssh_host_rsa_key
+
+HostKey /etc/ssh/ssh_host_ecdsa_key
+
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+RekeyLimit default none
+
+SyslogFacility AUTH
+
+LogLevel INFO
+
+LoginGraceTime 2m
+
+PermitRootLogin prohibit-password
+
+StrictModes yes
+
+MaxAuthTries 6
+
+MaxSessions 10
+
+PubkeyAuthentication yes
+
+AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2
+
+AuthorizedPrincipalsFile none
+
+AuthorizedKeysCommand none
+
+AuthorizedKeysCommandUser nobody
+
+HostbasedAuthentication no
+
+IgnoreUserKnownHosts no
+
+IgnoreRhosts yes
+
+PasswordAuthentication no
+
+PermitEmptyPasswords no
+
+ChallengeResponseAuthentication no
+
+#KerberosAuthentication no
+
+
+
+#KerberosOrLocalPasswd yes
+
+
+
+#KerberosTicketCleanup yes
+
+
+
+#KerberosGetAFSToken no
+
+
+
+#GSSAPIAuthentication no
+
+
+
+#GSSAPICleanupCredentials yes
+
+#GSSAPIStrictAcceptorCheck yes
+
+#GSSAPIKeyExchange no
+
+UsePAM yes
+
+AllowAgentForwarding yes
+
+AllowTcpForwarding yes
+
+GatewayPorts no
+
+X11Forwarding yes
+
+X11DisplayOffset 10
+
+X11UseLocalhost yes
+
+PermitTTY yes
+
+PrintMotd no
+
+PrintLastLog yes
+
+TCPKeepAlive yes
+
+PermitUserEnvironment no
+
+Compression delayed
+
+ClientAliveInterval 0
+
+ClientAliveCountMax 3
+
+PidFile /var/run/sshd.pid
+
+MaxStartups 10:30:100
+
+PermitTunnel no
+
+ChrootDirectory none
+
+VersionAddendum none
+
+Banner none
+
+AcceptEnv LANG LC_*
+
+Subsystem       sftp    /usr/lib/openssh/sftp-server
+
+Match User anoncvs
+    
+    X11Forwarding no
+    
+    AllowTcpForwarding no
+    
+    PermitTTY no
+    
+    ForceCommand cvs server
+
+ClientAliveInterval 120
+
+#UseDNS no
+
+``
 
 
