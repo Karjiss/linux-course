@@ -1,4 +1,4 @@
-# h4 - Pkg-file-service
+<img width="822" height="208" alt="image" src="https://github.com/user-attachments/assets/c3a0ee56-aa14-4f71-9353-6791b14cf510" /># h4 - Pkg-file-service
 
 Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta kurssille.
 
@@ -197,7 +197,7 @@ Sitten käynnistin orja-tietokoneeni, jolla kokeilin SSH-yhteyttä master-konees
 
 Käytin komentoa: ```$ ssh -p 1337 jani@192.168.1.253```.
 
-![Uploading image.png…]()
+<img width="815" height="207" alt="image" src="https://github.com/user-attachments/assets/f6aa0614-cdbf-41a9-8915-bfce5187c0ee" />
 
 - Pääsin sisälle, joten SSH-yhteys toimii!
 
