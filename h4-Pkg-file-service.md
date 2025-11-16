@@ -1,4 +1,4 @@
-<img width="822" height="208" alt="image" src="https://github.com/user-attachments/assets/c3a0ee56-aa14-4f71-9353-6791b14cf510" /># h4 - Pkg-file-service
+# h4 - Pkg-file-service
 
 Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta kurssille.
 
