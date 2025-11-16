@@ -188,7 +188,8 @@ ClientAliveInterval 120
 
 - Kopioin sshd_config tiedoston talteen kotihakemistooni.
 
-Seuraavaksi käynnistin ssh-palvelimen uudestaan, jotta asetukset tulevat voimaan.
+Seuraavaksi käynnistin SSH-palvelimen uudestaan, jotta asetukset tulevat voimaan.
+
 Käytin komentoa: ```$ sudo systemctl restart ssh```, jonka jälkeen tarkistin palvelun statuksen komennolla: ```$ sudo systemctl status ssh```.
 
 <img width="976" height="366" alt="image" src="https://github.com/user-attachments/assets/457722ec-a9ea-4e85-82be-722500fdafaa" />
@@ -247,13 +248,13 @@ Tarkistin vielä orjakoneella **sshd_config**-tiedoston muutokset komennolla ```
 
 <img width="521" height="511" alt="image" src="https://github.com/user-attachments/assets/a23138b8-dfce-4883-a082-168befe92af8" />
 
-- Muutokset näkyvät täälläkin, joten tilan suoriutui onnistuneesti.
+- Muutokset näkyvät täälläkin, joten tila suoriutui onnistuneesti.
 
-Kokeilin tahalleen rikkoa **sshd_config**-tiedoston orjakoneella.
+Kokeilin tahallaan rikkoa **sshd_config**-tiedoston orjakoneella.
 
 Muokkasin **sshd_config**-tiedostoa komennolla: ```$ sudoedit /etc/ssh/sshd_config```.
 
-Muokkasin paria riviä tiedoston alusta tavalla, jonka pitäisi rikkoa tiedosto:
+Muokkasin muuatamaa riviä tiedoston alusta tavalla, jonka pitäisi rikkoa tiedosto:
 
 <img width="628" height="174" alt="image" src="https://github.com/user-attachments/assets/4d572849-d7c7-4b7f-aa69-517267f60e5b" />
 
