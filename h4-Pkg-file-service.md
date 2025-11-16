@@ -195,9 +195,9 @@ Käytin komentoa: ```$ sudo systemctl restart ssh```, jonka jälkeen tarkistin p
 
 Sitten käynnistin orja-tietokoneeni, jolla kokeilin SSH-yhteyttä master-koneeseen.
 
-Käytin komentoa: ```$ ssh jani@192.168.1.253```.
+Käytin komentoa: ```$ ssh -p 1337 jani@192.168.1.253```.
 
-<img width="829" height="326" alt="image" src="https://github.com/user-attachments/assets/c344bbbc-9a40-4697-bb2c-3ec8add884a2" />
+![Uploading image.png…]()
 
 - Pääsin sisälle, joten SSH-yhteys toimii!
 
