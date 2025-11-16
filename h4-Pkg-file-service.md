@@ -23,7 +23,7 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 
 ## a) SSHouto
 
-Tässä tehtävässä käytin pkg-file-serviceä SSH asennukseen, sekä käyttöönottoon herra-orja arkkitehtuurissa.
+Tässä tehtävässä käytin pkg-file-serviceä SSH asennukseen, sekä käyttöönottoon herra-orja arkkitehtuurissa. 
 
 Aloitin tehtävän kokeilemalla manuaalisesti SSH:n asennusta.
 
@@ -171,3 +171,16 @@ ClientAliveInterval 120
 #UseDNS no
 
 ``` 
+
+- Kopioin sshd_config tiedoston talteen kotihakemistooni.
+
+Seuraavaksi käynnistin ssh-palvelimen uudestaan, jotta asetukset tulevat voimaan.
+Käytin komentoa: ```$ sudo systemctl restart ssh```, jonka jälkeen tarkastin palvelun statuksen komennolla: ```$ sudo systemctl status ssh```.
+
+<img width="976" height="366" alt="image" src="https://github.com/user-attachments/assets/457722ec-a9ea-4e85-82be-722500fdafaa" />
+
+Sitten käynnistin orja-tietokoneeni, jolla kokeilin SSH-yhteyttä master-koneeseen.
+
+Käytin komentoa: ```$ ssh -p 1337 jani@192.168.1.253```.
+
+<img width="847" height="213" alt="image" src="https://github.com/user-attachments/assets/3846709c-c7ea-46ff-a9bc-a344deabcf0b" />
