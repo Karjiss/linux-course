@@ -33,7 +33,7 @@ Syötin master-koneella komennon: ```$ sudo apt-get install ssh```.
 
 Avasin SSH:n konfigurointitiedoston komennolla: ```$ sudoedit /etc/ssh/sshd_config```.
 
-Poistin kommenttimerkit niistä asetuksista, mitä tarvitsin.
+Poistin kommenttimerkit niistä asetuksista, mitä tarvitsin, sekä lisäsin rivin "Port 1337" ja "Port 22".
 
 **sshd_config**:
 
