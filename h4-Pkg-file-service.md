@@ -96,23 +96,13 @@ ChallengeResponseAuthentication no
 
 #KerberosAuthentication no
 
-
-
 #KerberosOrLocalPasswd yes
-
-
 
 #KerberosTicketCleanup yes
 
-
-
 #KerberosGetAFSToken no
 
-
-
 #GSSAPIAuthentication no
-
-
 
 #GSSAPICleanupCredentials yes
 
