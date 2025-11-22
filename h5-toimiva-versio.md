@@ -14,3 +14,17 @@ Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta ku
 - Virtualisointiohjelmisto: **VMWare Workstation Pro**
 
 ## x) - Lue ja tiivistä
+
+### *Pro Git, 2ed: 1.3 Getting Started - What is Git?* (Chacon and Straub 2014)
+
+- Git säilyttää dataa "tilannekuvina", joita se luo projektiin esim. ```$ commit``` komennon yhteydessä.
+- Lähes jokainen operaatio Gitissä on paikallinen, sillä projektien kaikki tieto on saatavilla paikallisesti.
+
+### *Git add, commit, and push* (Foster, G)
+
+
+
+
+# Lähteet
+
+https://graphite.com/guides/git-add-commit-push
