@@ -65,6 +65,7 @@ Katsoin luomani avaimen komennolla: ```$ cat ~/.ssh/id_rsa.pub```.
 
 Sitten kopioin avaimen GitHubiin kohtaan " Settings --> SSH and GPG keys --> Add new SSH key:
 
+<img width="953" height="491" alt="image" src="https://github.com/user-attachments/assets/d5ae8fef-5953-4346-baa6-103b19dd9cd0" />
 
 
 # Lähteet
