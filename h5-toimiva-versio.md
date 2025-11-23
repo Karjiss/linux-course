@@ -129,7 +129,7 @@ Tässä tehtävässä tarkastelin oman varaston lokia, sekä omat tietoni lokiti
 
 Käytin komentoa: ```$ git log --patch```.
 
-<img width="804" height="335" alt="image" src="https://github.com/user-attachments/assets/631998e0-7320-415e-b4b0-6974673e9157" />
+<img width="706" height="309" alt="image" src="https://github.com/user-attachments/assets/ce0514e7-6b15-4924-8399-6d7773712b1c" />
 
 - Lokissa näkyi tekemäni muutos README.md -tiedostoon.
 - Käyttäjätietoni näkyvät jokaisessa itsetekemässäni commitissa, sekä ne ovat oikein.
