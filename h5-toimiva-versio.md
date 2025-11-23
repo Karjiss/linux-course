@@ -1,4 +1,4 @@
-<img width="765" height="763" alt="image" src="https://github.com/user-attachments/assets/ac044c44-5b3d-4e8c-98b0-845a120e05b5" /># h4 - Toimiva Versio
+<img width="804" height="296" alt="image" src="https://github.com/user-attachments/assets/86002fd7-a18d-4918-b3fc-9f61c9d96f11" /><img width="765" height="763" alt="image" src="https://github.com/user-attachments/assets/ac044c44-5b3d-4e8c-98b0-845a120e05b5" /># h4 - Toimiva Versio
 
 Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta kurssille.
 
@@ -114,7 +114,7 @@ Tyhjensin suurimman osan GNU lisenssin tiedostosta, sekä muutin sanoja sen sis�
 
 <img width="660" height="159" alt="image" src="https://github.com/user-attachments/assets/8bf4395f-125a-41a9-9fd1-410409011c1d" />
 
-Sitten komento: ```$ git add .``` 
+Sitten komento: ```$ git add .```.
 
 Käytin komentoa: ```$ git reset --hard``` korjatakseni virheet palauttamalla tiedoston aiempaan versioon.
 
@@ -123,7 +123,33 @@ Käytin komentoa: ```$ git reset --hard``` korjatakseni virheet palauttamalla ti
 - Muokattu lisenssi-tiedosto palautui alkuperäiseen versioonsam, joten palautuskomento toimi.
 
 
-## d) 
+## d) Tukki 
+
+Tässä tehtävässä tarkastelin oman varaston lokia, sekä omat tietoni lokitiedoissa.
+
+Käytin komentoa: ```$ git log --patch```.
+
+<img width="804" height="335" alt="image" src="https://github.com/user-attachments/assets/631998e0-7320-415e-b4b0-6974673e9157" />
+
+- Lokissa näkyi tekemäni muutos README.md -tiedostoon.
+- Käyttäjätietoni näkyvät jokaisessa itsetekemässäni commitissa, sekä ne ovat oikein.
+
+## e) Suolattu rakki
+
+Tässä tehtävässä ajoin Salt-tiloja omasta varastostani. Karvisen (2024) GitHub-varastoa tilojen luonnissa.
+
+Aloitin tekemällä hakemistopolun varastossani komennolla: ```$ mkdir -p srv/salt/apacherunner```
+
+Siirryin luomaani hakemistoon, jossa käytin komentoa: ```$ micro init.sls```.
+
+Syötin **init.sls**-tiedostoon tilan koodin:
+
+```
+
+
+
+```
+
 # Lähteet
 
 https://graphite.com/guides/git-add-commit-push
