@@ -138,7 +138,7 @@ Käytin komentoa: ```$ git log --patch```.
 
 Tässä tehtävässä ajoin Salt-tiloja omasta varastostani. Karvisen (2024) GitHub-varastoa tilojen luonnissa.
 
-Loin srv/salt/ hakemistot varastooni. Loin myös tilalle oman hakemiston "apachejuoksu".
+Loin srv/salt/ hakemistot varastooni. Loin myös tiloille hakemiston "apachejuoksu".
 
 Siirryin luomaani hakemistoon, jossa käytin komentoa: ```$ micro init.sls```.
 
