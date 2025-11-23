@@ -162,7 +162,7 @@ Aloitin tekemällä hakemistopolun varastossani komennolla: ```$ mkdir -p srv/sa
 
 Siirryin luomaani hakemistoon, jossa käytin komentoa: ```$ micro init.sls```.
 
-Syötin **init.sls**-tiedostoon tilan koodin:
+**init.sls:**
 
 ```
 apache2:
