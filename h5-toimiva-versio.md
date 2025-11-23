@@ -1,4 +1,24 @@
 <img width="804" height="296" alt="image" src="https://github.com/user-attachments/assets/86002fd7-a18d-4918-b3fc-9f61c9d96f11" /><img width="765" height="763" alt="image" src="https://github.com/user-attachments/assets/ac044c44-5b3d-4e8c-98b0-845a120e05b5" /># h4 - Toimiva Versio
+apache2:
+  pkg.installed
+
+
+apache2-service:
+  service.running:
+    - name: apache2
+    - enable: True
+    - require:
+      - pkg: apache2apache2:
+  pkg.installed
+
+
+apache2-service:
+  service.running:
+    - name: apache2
+    - enable: True
+    - require:
+      - pkg: apache2
+
 
 Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta kurssille.
 
@@ -145,9 +165,16 @@ Siirryin luomaani hakemistoon, jossa käytin komentoa: ```$ micro init.sls```.
 Syötin **init.sls**-tiedostoon tilan koodin:
 
 ```
+apache2:
+  pkg.installed
 
 
-
+apache2-service:
+  service.running:
+    - name: apache2
+    - enable: True
+    - require:
+      - pkg: apache2
 ```
 
 # Lähteet
