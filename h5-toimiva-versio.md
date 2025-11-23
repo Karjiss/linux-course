@@ -1,4 +1,4 @@
-# h4 - Toimiva Versio
+<img width="765" height="763" alt="image" src="https://github.com/user-attachments/assets/ac044c44-5b3d-4e8c-98b0-845a120e05b5" /># h4 - Toimiva Versio
 
 Tämä on raportti kotitehtävään Tero Karvisen (2025) palvelinten hallinta kurssille.
 
@@ -28,9 +28,38 @@ Git-tiedostot voivat olla kolmessa eri tilassa:
   
 ### *Git add, commit, and push* (Foster, G)
 
+- Komento: ```$ git add``` siirtää "modified" tiedoston "staged" vaiheeseen.
+- Komennon: ```$ git commit``` ajo siirtää edellisen ```$ git add```-komennon "staged" tiedostot paikalliseen tilannekuvaan.
+- ```$ git pull```-komennolla voit "vetää" esimerkiksi jaetusta varastosta uusimman päivityksen, jotta tilanne ei sekoitu.
+- ```$ git push```-komento siirtää paikalliset päivitykset verkkoon Gitin palvelimille.
 
+### *Github - terokarvinen/suolax* (Karvinen 2024)
 
+<img width="1297" height="580" alt="image" src="https://github.com/user-attachments/assets/0c181338-d77a-4505-93d7-af8cc0b37eda" />
 
+<img width="719" height="402" alt="image" src="https://github.com/user-attachments/assets/886b2816-df89-4b46-ab4f-557234495f8d" />
+
+- Tero on lisännyt tilan "favourite-package", joka asentaa tarvittaessa useita oletettavasti hänen lempiohjelmia Saltilla.
+
+## a) Online
+
+Tässä tehtävässä loin uuden GitHub varaston, johon tuli ```README.md```-tiedosto, sekä GNU lisenssi.
+
+Aloitin avaamalla Githubin nettisivun oikeasta ylälaidasta palkin, josta valitsin "*New repository*". 
+
+<img width="229" height="335" alt="image" src="https://github.com/user-attachments/assets/8410acc2-03e7-4070-b882-07e3e9617bbc" />
+
+Sitten lisäsin tehtävän vaatimat tiedot kuvan mukaisesti, jonka jälkeen klikkasin kohtaa "*Create repository*":
+
+<img width="765" height="763" alt="image" src="https://github.com/user-attachments/assets/9b04425d-bfb6-4345-a7a9-aae77d1865dd" />
+
+## b) Dolly
+
+Tässä tehtävässä kloonasin juuri luomani varaston omaan Linux-ympäristööni.
+
+Tätä varten minun piti luoda 
 # Lähteet
 
 https://graphite.com/guides/git-add-commit-push
+
+https://github.com/terokarvinen/suolax/
