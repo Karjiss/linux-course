@@ -26,7 +26,7 @@ Git-tiedostot voivat olla kolmessa eri tilassa:
 - Staged: Muokattu tiedosto ja tiedostoversio on "merkattu" lähetettäväksi seuraavaan tilannekuvaan.
 - Committed: Tiedosto ja sen data on säilytettynä paikallisessa tietokannassasi.
   
-### *Git add, commit, and push* (Foster, G)
+### *Git add, commit, and push* (Foster, G s.a)
 
 - Komento: ```$ git add``` siirtää "modified" tiedoston "staged" vaiheeseen.
 - Komennon: ```$ git commit``` ajo siirtää edellisen ```$ git add```-komennon "staged" tiedostot paikalliseen tilannekuvaan.
@@ -138,7 +138,7 @@ Käytin komentoa: ```$ git log --patch```.
 
 Tässä tehtävässä ajoin Salt-tiloja omasta varastostani. Karvisen (2024) GitHub-varastoa tilojen luonnissa.
 
-Aloitin tekemällä hakemistopolun varastossani komennolla: ```$ mkdir -p srv/salt/apacherunner```
+Loin srv/salt/ hakemistot varastooni. Loin myös tilalle oman hakemiston "apachejuoksu".
 
 Siirryin luomaani hakemistoon, jossa käytin komentoa: ```$ micro init.sls```.
 
@@ -157,8 +157,23 @@ apache2-service:
       - pkg: apache2
 ```
 
-# Lähteet
+- Tämä ajaa 2 tilaa samaan aikaan.
+  
+Puskin tehdyt muutokset GitHubiin.
 
-https://graphite.com/guides/git-add-commit-push
+Kokeilin ajaa tilat komennolla: ```$ sudo salt-call --local --file-root srv/salt state.apply apachejuoksu```.
 
-https://github.com/terokarvinen/suolax/
+<img width="858" height="544" alt="image" src="https://github.com/user-attachments/assets/9a7442a3-a2c6-40db-b0da-68b6bc0d9787" />
+
+- Tilat suorituivat onnistuneesti.
+- Muutoksia ei tehty, sillä paketti oli jo asennettu, sekä se oli jo käynnissä.
+
+
+
+# Lähdeluettelo
+
+Chacon, S & Straub, B. 2014. What is Git? Luettavissa: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
+
+Foster, Greg. s.a. Graphite. Luettavissa: https://graphite.com/guides/git-add-commit-push
+
+Karvinen, Tero. 2024. Github. Luettavissa: https://github.com/terokarvinen/suolax/
