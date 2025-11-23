@@ -67,11 +67,20 @@ Sitten kopioin avaimen GitHubiin kohtaan " Settings --> SSH and GPG keys --> Add
 
 <img width="953" height="491" alt="image" src="https://github.com/user-attachments/assets/d5ae8fef-5953-4346-baa6-103b19dd9cd0" />
 
+Lisäsin myös omat tietoni Gittiin Linuxilla komennoilla:
+
+```
+git config --global user.email "jani.karjalainen@myy.haaga-helia.fi"
+git config --global user.name "Karjiss"
+```
+
 Avaimen luonnin jälkeen kloonaus koneelle voi alkaa.
 
 Kloonasin varaston komennolla: ```$ git clone git@github.com:Karjiss/yellow-snow.git```
 
 <img width="843" height="156" alt="image" src="https://github.com/user-attachments/assets/18dc0bc2-e1f3-4506-bd18-dade07855489" />
+
+Siirryin varastoon komennolla: ```$ cd gitprojut/yellow-snow```.
 
 Tein vielä muutoksen "README.md"-tiedostoon nanolla. Lisäsin sinne rivin "Hello World!".
 
@@ -81,9 +90,40 @@ Seuraavaksi käytin komentoa: ```$ git add .```, sitten: ```$ git commit```.
 
 <img width="607" height="102" alt="image" src="https://github.com/user-attachments/assets/d0fb2c12-d29d-446c-8bba-2deb515b3d1e" />
 
+Seuraavaksi päivitin varaston varmuuden vuoksi komennolla: ```$ git pull```.
+
+<img width="589" height="21" alt="image" src="https://github.com/user-attachments/assets/3c21ebed-63a7-46bb-884e-9c64663e54d6" />
+
+- Varasto oli jo uusimmassa versiossa, joten pystyin jatkamaan huoletta.
+
+Viimeiseksi käytin komentoa: ```$ git push```, joka lähettää muutokset verkkopalvelimelle.
+
+<img width="594" height="182" alt="image" src="https://github.com/user-attachments/assets/d7f59424-9f08-4490-865c-2e2f47587ac3" />
+
+Tarkastin muutokset vielä verkkoselaimen kautta:
+
+<img width="904" height="406" alt="image" src="https://github.com/user-attachments/assets/34d3e48e-d480-4929-a3ff-d18e284fbdc8" />
+
+- Muutos oli mennyt läpi ja näkyi verkossa myös.
+
+## c) Doh!
+
+Tässä tehtävässä tein virheellisen muutoksen varastoon, jotta pystyin kokeilemaan palautusta.
+
+Tyhjensin suurimman osan GNU lisenssin tiedostosta, sekä muutin sanoja sen sisällä:
+
+<img width="660" height="159" alt="image" src="https://github.com/user-attachments/assets/8bf4395f-125a-41a9-9fd1-410409011c1d" />
+
+Sitten komento: ```$ git add .``` 
+
+Käytin komentoa: ```$ git reset --hard``` korjatakseni virheet palauttamalla tiedoston aiempaan versioon.
+
+<img width="669" height="402" alt="image" src="https://github.com/user-attachments/assets/5531ef26-b923-428e-a718-712b81608590" />
+
+- Muokattu lisenssi-tiedosto palautui alkuperäiseen versioonsam, joten palautuskomento toimi.
 
 
-
+## d) 
 # Lähteet
 
 https://graphite.com/guides/git-add-commit-push
