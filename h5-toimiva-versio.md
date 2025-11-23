@@ -57,7 +57,16 @@ Sitten lisäsin tehtävän vaatimat tiedot kuvan mukaisesti, jonka jälkeen klik
 
 Tässä tehtävässä kloonasin juuri luomani varaston omaan Linux-ympäristööni.
 
-Tätä varten minun piti luoda 
+Tätä varten minun piti luoda SSH-avainpari, jonka lisäsin GitHubiin.
+
+Loin avainparin Linuxilla komennolla: ```$ ssh-keygen -t rsa -b 4096 -C "jani.karjalainen@myy.haaga-helia.fi"```
+
+Katsoin luomani avaimen komennolla: ```$ cat ~/.ssh/id_rsa.pub```. 
+
+Sitten kopioin avaimen GitHubiin kohtaan " Settings --> SSH and GPG keys --> Add new SSH key:
+
+
+
 # Lähteet
 
 https://graphite.com/guides/git-add-commit-push
