@@ -51,7 +51,7 @@ Aloitin avaamalla Githubin nettisivun oikeasta ylälaidasta palkin, josta valits
 
 Sitten lisäsin tehtävän vaatimat tiedot kuvan mukaisesti, jonka jälkeen klikkasin kohtaa "*Create repository*":
 
-<img width="765" height="763" alt="image" src="https://github.com/user-attachments/assets/9b04425d-bfb6-4345-a7a9-aae77d1865dd" />
+<img width="779" height="767" alt="image" src="https://github.com/user-attachments/assets/cb3c28c0-61cd-4212-95ca-559354bcc727" />
 
 ## b) Dolly
 
