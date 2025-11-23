@@ -59,7 +59,7 @@ Tässä tehtävässä kloonasin juuri luomani varaston omaan Linux-ympäristöö
 
 Tätä varten minun piti luoda SSH-avainpari, jonka lisäsin GitHubiin.
 
-Loin avainparin Linuxilla komennolla: ```$ ssh-keygen -t rsa -b 4096 -C "jani.karjalainen@myy.haaga-helia.fi"```
+Loin avainparin Linuxilla komennolla: ```$ ssh-keygen -t rsa -b 4096 -C "jani.karjalainen@myy.haaga-helia.fi"```.
 
 Katsoin luomani avaimen komennolla: ```$ cat ~/.ssh/id_rsa.pub```. 
 
@@ -76,7 +76,7 @@ git config --global user.name "Karjiss"
 
 Avaimen luonnin jälkeen kloonaus koneelle voi alkaa.
 
-Kloonasin varaston komennolla: ```$ git clone git@github.com:Karjiss/yellow-snow.git```
+Kloonasin varaston komennolla: ```$ git clone git@github.com:Karjiss/yellow-snow.git```.
 
 <img width="843" height="156" alt="image" src="https://github.com/user-attachments/assets/18dc0bc2-e1f3-4506-bd18-dade07855489" />
 
@@ -120,7 +120,7 @@ Käytin komentoa: ```$ git reset --hard``` korjatakseni virheet palauttamalla ti
 
 <img width="669" height="402" alt="image" src="https://github.com/user-attachments/assets/5531ef26-b923-428e-a718-712b81608590" />
 
-- Muokattu lisenssi-tiedosto palautui alkuperäiseen versioonsam, joten palautuskomento toimi.
+- Muokattu lisenssi-tiedosto palautui alkuperäiseen versioonsa, joten palautuskomento toimi.
 
 
 ## d) Tukki 
