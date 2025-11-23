@@ -131,7 +131,7 @@ Käytin komentoa: ```$ git log --patch```.
 
 <img width="706" height="309" alt="image" src="https://github.com/user-attachments/assets/ce0514e7-6b15-4924-8399-6d7773712b1c" />
 
-- Lokissa näkyi tekemäni muutos README.md -tiedostoon, jota olin muokannut edellisen tehtävän jälkeen
+- Lokissa näkyi tekemäni muutos README.md -tiedostoon, jota olin muokannut edellisen tehtävän jälkeen.
 - Käyttäjätietoni näkyvät jokaisessa itsetekemässäni commitissa, sekä ne ovat oikein.
 
 ## e) Suolattu rakki
