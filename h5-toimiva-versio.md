@@ -67,6 +67,22 @@ Sitten kopioin avaimen GitHubiin kohtaan " Settings --> SSH and GPG keys --> Add
 
 <img width="953" height="491" alt="image" src="https://github.com/user-attachments/assets/d5ae8fef-5953-4346-baa6-103b19dd9cd0" />
 
+Avaimen luonnin jälkeen kloonaus koneelle voi alkaa.
+
+Kloonasin varaston komennolla: ```$ git clone git@github.com:Karjiss/yellow-snow.git```
+
+<img width="843" height="156" alt="image" src="https://github.com/user-attachments/assets/18dc0bc2-e1f3-4506-bd18-dade07855489" />
+
+Tein vielä muutoksen "README.md"-tiedostoon nanolla. Lisäsin sinne rivin "Hello World!".
+
+Seuraavaksi käytin komentoa: ```$ git add .```, sitten: ```$ git commit```.
+
+- ```$ git commit```-komennon yhteydessä kirjoitin lokiin maininnan tehdyistä muutoksista.
+
+<img width="607" height="102" alt="image" src="https://github.com/user-attachments/assets/d0fb2c12-d29d-446c-8bba-2deb515b3d1e" />
+
+
+
 
 # Lähteet
 
